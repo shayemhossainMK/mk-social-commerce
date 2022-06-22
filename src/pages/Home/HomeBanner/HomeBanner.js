@@ -123,6 +123,40 @@ export default class HomeBanner extends Component {
                 </div>
               </div>
             </div>
+            <div key={4}>
+              <div className="flex justify-around h-screen ">
+                <div className="mt-40">
+                  <div>
+                    <p className="text-gray-800 font-bold text-4xl">
+                      লিংক শেয়ার কর এবং
+                    </p>
+                    <p className="text-secondary my-3 text-2xl font-bold">
+                      কামাও{" "}
+                    </p>
+                    <p className="text-gray-600 text-2xl">
+                      লিংক শেয়ার করতে পারবে হাজারো সাইট থেকে!
+                    </p>
+                  </div>
+                  <div className="flex mt-8">
+                    <a href="">
+                      <img className="w-7" src={imo} alt="" />
+                    </a>
+                    <a href="" className="mx-5">
+                      <img className="w-7" src={telegram} alt="" />
+                    </a>
+                    <a href="">
+                      <img className="w-7" src={wapp} alt="" />
+                    </a>
+                    <a href="" className="mx-5">
+                      <img className="w-7" src={messenger} alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-10 md:mt-20">
+                  <img className="w-96" src={homeBanner1} alt="" />
+                </div>
+              </div>
+            </div>
           </Slider>
         </div>
       </div>
