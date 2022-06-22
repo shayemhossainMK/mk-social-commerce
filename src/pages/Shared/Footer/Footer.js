@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-gray-900 text-white">
       <div className="py-10 shadow-2xl ">
         <div className="grid grid-cols-2 md:grid-cols-4">
-          <div className="md:mx-auto md:pl-0">
+          <div className="md:mx-auto pl-4 md:pl-0">
             <p className="text-secondary text-xl mb-3 font-bold">Navigate</p>
             <div className="font-bold">
               <ul>

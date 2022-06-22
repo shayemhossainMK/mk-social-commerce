@@ -3,8 +3,8 @@ import React from "react";
 const WhyKamao = () => {
   return (
     <div className="pb-16">
-      <div className="text-center my-16">
-        <h1 className="text-3xl text-primary font-semibold mt-5 mb-16">
+      <div className="text-center my-5 md:my-16">
+        <h1 className="text-2xl md:text-3xl text-primary font-semibold mt-5 mb-5 md:mb-16">
           Why KAMAO Is the Best #MoneyMaking Platform?
         </h1>
       </div>

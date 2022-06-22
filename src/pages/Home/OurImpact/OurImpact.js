@@ -13,7 +13,7 @@ const OurImpact = () => {
         </h1>
       </div>
       <div
-        className="grid grid-cols-1 md:grid-cols-3
+        className="grid grid-cols-1 md:grid-cols-3 gap-10
       "
       >
         <div className="text-center">

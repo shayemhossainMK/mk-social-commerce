@@ -13,7 +13,7 @@ const FourSteps = () => {
           Start Earning In Just 4 Steps
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 my-20">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 my-20">
         <div className="text-center">
           <img
             className="p-3 mb-6 mx-auto bg-[#FFA500] rounded-full"

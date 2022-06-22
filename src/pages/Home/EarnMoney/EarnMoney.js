@@ -3,7 +3,7 @@ import React from "react";
 const EarnMoney = () => {
   return (
     <div className="pb-10">
-      <div className="text-center">
+      <div className="md:text-center">
         <h1 className="text-3xl text-primary font-semibold mt-5 mb-8">
           Earn Money From Home
         </h1>
