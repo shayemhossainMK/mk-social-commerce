@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../Shared/Footer/Footer";
 import EarnMoney from "../EarnMoney/EarnMoney";
 import FourSteps from "../FourSteps/FourSteps";
 import HomeBanner from "../HomeBanner/HomeBanner";
@@ -21,6 +22,7 @@ const Home = () => {
         <OurImpact></OurImpact>
         <WhyKamao></WhyKamao>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

@@ -19,13 +19,13 @@ export default class HomeBanner extends Component {
     };
     return (
       <div className="bg-gray-100">
-        <div className="h-screen px-1 md:px-10">
+        <div className="h-screen px-5 md:px-10">
           <Slider ref={(c) => (this.slider = c)} {...settings}>
             <div key={1}>
-              <div className="flex justify-around h-screen ">
-                <div className="mt-40">
-                  <div>
-                    <p className="text-gray-800 font-bold text-4xl">
+              <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
+                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                  <div className="text-center md:text-start">
+                    <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
                     </p>
                     <p className="text-secondary my-3 text-2xl font-bold">
@@ -35,7 +35,7 @@ export default class HomeBanner extends Component {
                       লিংক শেয়ার করতে পারবে হাজারো সাইট থেকে!
                     </p>
                   </div>
-                  <div className="flex mt-8">
+                  <div className="flex mt-8 justify-center md:justify-start">
                     <a href="">
                       <img className="w-7" src={imo} alt="" />
                     </a>
@@ -50,16 +50,17 @@ export default class HomeBanner extends Component {
                     </a>
                   </div>
                 </div>
-                <div className="mt-10 md:mt-20">
-                  <img className="w-96" src={homeBanner1} alt="" />
+                <div className="pt-20 md:pt-0 md:mt-20 order-1 md:order-2">
+                  <img className="w-80 md:w-96" src={homeBanner1} alt="" />
                 </div>
               </div>
             </div>
+
             <div key={2}>
-              <div className="flex justify-around h-screen ">
-                <div className="mt-40">
-                  <div>
-                    <p className="text-gray-800 font-bold text-4xl">
+              <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
+                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                  <div className="text-center md:text-start">
+                    <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
                     </p>
                     <p className="text-secondary my-3 text-2xl font-bold">
@@ -69,7 +70,7 @@ export default class HomeBanner extends Component {
                       লিংক শেয়ার করতে পারবে হাজারো সাইট থেকে!
                     </p>
                   </div>
-                  <div className="flex mt-8">
+                  <div className="flex mt-8 justify-center md:justify-start">
                     <a href="">
                       <img className="w-7" src={imo} alt="" />
                     </a>
@@ -84,16 +85,17 @@ export default class HomeBanner extends Component {
                     </a>
                   </div>
                 </div>
-                <div className="mt-10 md:mt-20">
-                  <img className="w-96" src={homeBanner1} alt="" />
+                <div className="pt-20 md:pt-0 md:mt-20 order-1 md:order-2">
+                  <img className="w-80 md:w-96" src={homeBanner1} alt="" />
                 </div>
               </div>
             </div>
+
             <div key={3}>
-              <div className="flex justify-around h-screen ">
-                <div className="mt-40">
-                  <div>
-                    <p className="text-gray-800 font-bold text-4xl">
+              <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
+                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                  <div className="text-center md:text-start">
+                    <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
                     </p>
                     <p className="text-secondary my-3 text-2xl font-bold">
@@ -103,7 +105,7 @@ export default class HomeBanner extends Component {
                       লিংক শেয়ার করতে পারবে হাজারো সাইট থেকে!
                     </p>
                   </div>
-                  <div className="flex mt-8">
+                  <div className="flex mt-8 justify-center md:justify-start">
                     <a href="">
                       <img className="w-7" src={imo} alt="" />
                     </a>
@@ -118,16 +120,17 @@ export default class HomeBanner extends Component {
                     </a>
                   </div>
                 </div>
-                <div className="mt-10 md:mt-20">
-                  <img className="w-96" src={homeBanner1} alt="" />
+                <div className="pt-20 md:pt-0 md:mt-20 order-1 md:order-2">
+                  <img className="w-80 md:w-96" src={homeBanner1} alt="" />
                 </div>
               </div>
             </div>
+
             <div key={4}>
-              <div className="flex justify-around h-screen ">
-                <div className="mt-40">
-                  <div>
-                    <p className="text-gray-800 font-bold text-4xl">
+              <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
+                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                  <div className="text-center md:text-start">
+                    <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
                     </p>
                     <p className="text-secondary my-3 text-2xl font-bold">
@@ -137,7 +140,7 @@ export default class HomeBanner extends Component {
                       লিংক শেয়ার করতে পারবে হাজারো সাইট থেকে!
                     </p>
                   </div>
-                  <div className="flex mt-8">
+                  <div className="flex mt-8 justify-center md:justify-start">
                     <a href="">
                       <img className="w-7" src={imo} alt="" />
                     </a>
@@ -152,8 +155,8 @@ export default class HomeBanner extends Component {
                     </a>
                   </div>
                 </div>
-                <div className="mt-10 md:mt-20">
-                  <img className="w-96" src={homeBanner1} alt="" />
+                <div className="pt-20 md:pt-0 md:mt-20 order-1 md:order-2">
+                  <img className="w-80 md:w-96" src={homeBanner1} alt="" />
                 </div>
               </div>
             </div>
