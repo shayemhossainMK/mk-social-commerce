@@ -23,7 +23,7 @@ export default class HomeBanner extends Component {
           <Slider ref={(c) => (this.slider = c)} {...settings}>
             <div key={1}>
               <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
-                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                <div className=" md:mt-40 order-2 md:order-1">
                   <div className="text-center md:text-start">
                     <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
@@ -58,7 +58,7 @@ export default class HomeBanner extends Component {
 
             <div key={2}>
               <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
-                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                <div className="md:mt-40 order-2 md:order-1">
                   <div className="text-center md:text-start">
                     <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
@@ -93,7 +93,7 @@ export default class HomeBanner extends Component {
 
             <div key={3}>
               <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
-                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                <div className="md:mt-40 order-2 md:order-1">
                   <div className="text-center md:text-start">
                     <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
@@ -128,7 +128,7 @@ export default class HomeBanner extends Component {
 
             <div key={4}>
               <div className="grid grid-cols-1 md:flex  md:justify-around mx-5 md:mx-5 h-screen ">
-                <div className=" mt-[-7rem] md:mt-40 order-2 md:order-1">
+                <div className="md:mt-40 order-2 md:order-1">
                   <div className="text-center md:text-start">
                     <p className="text-gray-800 font-bold text-3xl md:text-4xl">
                       লিংক শেয়ার কর এবং
