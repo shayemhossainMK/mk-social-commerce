@@ -6,6 +6,7 @@ import HomeHeader from "../HomeHeader/HomeHeader";
 import HowWorks from "../HowWorks/HowWorks";
 import JoinNow from "../JoinNow/JoinNow";
 import OurImpact from "../OurImpact/OurImpact";
+import WhyKamao from "../WhyKamao/WhyKamao";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <FourSteps></FourSteps>
         <HowWorks></HowWorks>
         <OurImpact></OurImpact>
+        <WhyKamao></WhyKamao>
       </div>
     </div>
   );
