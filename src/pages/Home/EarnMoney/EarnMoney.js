@@ -4,7 +4,7 @@ const EarnMoney = () => {
   return (
     <div className="pb-10">
       <div className="md:text-center">
-        <h1 className="text-3xl text-primary font-semibold mt-5 mb-8">
+        <h1 className="text-3xl text-primary font-semibold mt-5 mb-8 text-center">
           Earn Money From Home
         </h1>
       </div>
