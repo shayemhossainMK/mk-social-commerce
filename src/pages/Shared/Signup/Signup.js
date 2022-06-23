@@ -1,9 +1,42 @@
 import React from "react";
 import HomeHeader from "../../Home/HomeHeader/HomeHeader";
 import signupImg from "../../../imgs/contactImg.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithFacebook,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 
 const Signup = () => {
+  const [createUserWithEmailAndPassword, user, error] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithFacebook, facebookUser, facebookLoading, facebookError] =
+    useSignInWithFacebook(auth);
+  const navigate = useNavigate();
+
+  const handleSignup = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const cpassword = e.target.cpassword.value;
+
+    if (password === cpassword) {
+      createUserWithEmailAndPassword(email, password);
+      toast("Email verification send!");
+    } else {
+      toast.error("Password not matched!");
+    }
+  };
+  if (user || googleUser || facebookUser) {
+    navigate("/");
+  }
   return (
     <div>
       <HomeHeader></HomeHeader>
@@ -18,26 +51,30 @@ const Signup = () => {
               <hr className="w-36  mx-auto" />
               <hr className="w-36  mx-auto" />
             </div>
-            <form action="" className="p-5">
+            <form action="" className="p-5" onSubmit={handleSignup}>
               <div className="grid grid-cols-2 gap-5">
                 <input
                   type="text"
                   placeholder="Name…"
+                  name="name"
                   class="input input-sm bg-gray-100 w-full rounded-full max-w-xs"
                 />
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Email…"
+                  name="email"
                   class="input input-sm bg-gray-100 rounded-full w-full max-w-xs"
                 />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Password…"
+                  name="password"
                   class="input input-sm bg-gray-100 w-full rounded-full max-w-xs"
                 />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Confirm Password…"
+                  name="cpassword"
                   class="input input-sm bg-gray-100 w-full  rounded-full max-w-xs"
                 />
               </div>
@@ -93,7 +130,10 @@ const Signup = () => {
                 />
               </div>
               <div className="text-center mt-5">
-                <button className="btn btn-primary btn-sm text-white  ">
+                <button
+                  type="submit"
+                  className="btn btn-primary btn-sm text-white  "
+                >
                   Sign Up
                 </button>
               </div>
@@ -159,6 +199,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
