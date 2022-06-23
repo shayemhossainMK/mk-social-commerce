@@ -2,6 +2,7 @@ import React from "react";
 import HomeHeader from "../../Home/HomeHeader/HomeHeader";
 import signupImg from "../../../imgs/contactImg.png";
 import { Link } from "react-router-dom";
+
 const Signup = () => {
   return (
     <div>
@@ -12,6 +13,11 @@ const Signup = () => {
         </div>
         <div className="">
           <div className="shadow-xl rounded-2xl ">
+            <div className="text-center py-5 uppercase">
+              <h1 className="font-bold text-xl">Sign up</h1>
+              <hr className="w-36  mx-auto" />
+              <hr className="w-36  mx-auto" />
+            </div>
             <form action="" className="p-5">
               <div className="grid grid-cols-2 gap-5">
                 <input

@@ -14,7 +14,7 @@ const Login = () => {
           </div>
 
           <div className="shadow-xl rounded-2xl md:w-96  mt-16 md:mt-0">
-            <div className="text-center">
+            <div className="text-center py-5 uppercase">
               <h1 className="font-bold text-xl">Login</h1>
               <hr className="w-36  mx-auto" />
               <hr className="w-36  mx-auto" />
