@@ -21,7 +21,7 @@ const Footer = () => {
                   Get Help
                 </li>
                 <li className="hover:underline hover:text-secondary hover:cursor-pointer">
-                  Terms & Conditions
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
