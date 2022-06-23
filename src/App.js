@@ -4,6 +4,8 @@ import Contact from "./pages/Contact/Contact";
 import Bangla from "./pages/Home/Bangla/Bangla";
 import English from "./pages/Home/English/English";
 import Home from "./pages/Home/Home/Home";
+import Login from "./pages/Shared/Login/Login";
+import Signup from "./pages/Shared/Signup/Signup";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/bangla" element={<Bangla></Bangla>}></Route>
         <Route path="/english" element={<English></English>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
+        <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
     </div>
   );
