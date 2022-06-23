@@ -2,9 +2,9 @@ import React from "react";
 
 const DashboardSubBanner = () => {
   return (
-    <div className="py-5 shadow-lg my-16 px-5 md:px-20 bg-gray-200">
+    <div className="py-5 shadow-lg my-16 px-5 md:px-20  bg-gray-200">
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-4 justify-center mx-auto w-full text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 justify-center mx-auto w-full text-center max-w-[1280px] ">
           <div className="shadow-xl mx-auto w-48 bg-[#6A2982] rounded-2xl p-2">
             <p className="text-center text-xl text-white pb-2 font-semibold">
               Deal of the day

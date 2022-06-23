@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <div>
       <DashboardHeader></DashboardHeader>
-      <div className="flex items-center shadow-md justify-evenly p-7 bg-gray-200 my-5">
+      <div className="flex items-center shadow-md justify-evenly p-7 bg-gray-200 my-5 ">
         <p className="text-xl text-primary">
           Your total profit <span className="font-bold">0.00 BDT</span>
         </p>
