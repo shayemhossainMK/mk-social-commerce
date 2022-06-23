@@ -54,7 +54,7 @@ const Login = () => {
     );
   }
   if (user || googleUser || facebookUser) {
-    navigate("/");
+    navigate("/dashboard");
   }
 
   return (

@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./pages/Contact/Contact";
+import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import Bangla from "./pages/Home/Bangla/Bangla";
 import English from "./pages/Home/English/English";
 import Home from "./pages/Home/Home/Home";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
       </Routes>
     </div>
   );
