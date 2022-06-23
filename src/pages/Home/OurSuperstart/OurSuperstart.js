@@ -31,7 +31,7 @@ export default class OurSuperstart extends Component {
     };
     return (
       <div className="bg-base-100">
-        <div className="px-5 md:px-20 py-5">
+        <div className="px-1 md:px-20 py-5">
           <div className="md:text-center pb-5">
             <h1 className="text-3xl text-primary font-semibold mt-5 mb-8 text-center">
               Meet Our Superstars
