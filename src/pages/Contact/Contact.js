@@ -19,7 +19,7 @@ const Contact = () => {
         <div className="flex justify-center py-10">
           <form className="shadow-2xl rounded-xl py-10 md:px-20" action="">
             <div className="grid grid-cols-1 md:flex px-5 md:px-0  justify-between mb-2">
-              <div class="form-control">
+              <div class="form-control pr-0 md:pr-3">
                 <label class="label">
                   <span class="label-text">Enter your name</span>
                 </label>
@@ -40,14 +40,14 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <div className="">
+            <div className=" px-5 md:px-0">
+              <label class="label">
+                <span class="label-text">Enter your Message</span>
+              </label>
               <textarea
-                className=" border-2 rounded-xl bg-gray-100 my-5 md:my-0"
+                className=" textarea border-2 rounded-xl bg-gray-100 my-2 md:my-0 w-full"
                 name=""
                 id=""
-                placeholder="text here.."
-                cols="50"
-                rows="5"
               ></textarea>
             </div>
             <label class="label px-5 md:px-0">
