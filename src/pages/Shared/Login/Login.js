@@ -8,6 +8,8 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import { toast, ToastContainer } from "react-toastify";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -28,6 +30,29 @@ const Login = () => {
 
     await signInWithEmailAndPassword(email, password);
   };
+
+  const resetPassword = () => {
+    const email = emailRef.current.value;
+    sendPasswordResetEmail(email);
+    toast("Reset email send!");
+  };
+
+  let errorElement;
+  if (error) {
+    errorElement = (
+      <div>
+        <p className="text-primary text-xs mt-2 px-3">
+          User or password are not valid!
+          <span
+            onClick={resetPassword}
+            className="text-orange-400 ml-1 cursor-pointer underline"
+          >
+            Forget password?
+          </span>
+        </p>
+      </div>
+    );
+  }
   if (user || googleUser || facebookUser) {
     navigate("/");
   }
@@ -64,7 +89,7 @@ const Login = () => {
                   class="input mt-5 bg-gray-100 rounded-full w-full max-w-xs"
                 />
               </div>
-
+              {errorElement}
               <div className="text-center mt-5">
                 <button
                   type="submit"
@@ -136,6 +161,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
