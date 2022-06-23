@@ -1,7 +1,14 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../../firebase.init";
 
 const JoinNow = () => {
+  const [user] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
+  };
   return (
     <div className="">
       <div className="text-center my-28">
@@ -10,11 +17,20 @@ const JoinNow = () => {
             Join now
           </button>
         </Link>
-        <Link to="/login">
-          <button className=" mt-5 btn btn-outline border-blue-600 border-4 text-primary px-7 md:px-10 rounded-full shadow-sm text-xl hover:bg-primary hover:text-white hover:border-primary duration-500 ">
-            sign in
+        {user ? (
+          <button
+            onClick={logout}
+            className=" mt-5 btn btn-outline border-blue-600 border-4 text-primary px-7 md:px-10 rounded-full shadow-sm text-xl hover:bg-primary hover:text-white hover:border-primary duration-500 "
+          >
+            Sign out
           </button>
-        </Link>
+        ) : (
+          <Link to="/login">
+            <button className=" mt-5 btn btn-outline border-blue-600 border-4 text-primary px-7 md:px-10 rounded-full shadow-sm text-xl hover:bg-primary hover:text-white hover:border-primary duration-500 ">
+              sign in
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

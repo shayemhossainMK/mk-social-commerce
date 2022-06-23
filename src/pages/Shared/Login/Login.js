@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useRef } from "react";
 import HomeHeader from "../../Home/HomeHeader/HomeHeader";
 import signupImg from "../../../imgs/contactImg.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithFacebook,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 
 const Login = () => {
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithFacebook, facebookUser, facebookLoading, facebookError] =
+    useSignInWithFacebook(auth);
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    await signInWithEmailAndPassword(email, password);
+  };
+  if (user || googleUser || facebookUser) {
+    navigate("/");
+  }
+
   return (
     <div>
       <HomeHeader></HomeHeader>
@@ -19,16 +47,20 @@ const Login = () => {
               <hr className="w-36  mx-auto" />
               <hr className="w-36  mx-auto" />
             </div>
-            <form action="" className="p-5">
+            <form action="" className="p-5" onSubmit={handleLogin}>
               <div className="text-center">
                 <input
                   type="email"
+                  ref={emailRef}
                   placeholder="Email"
+                  name="email"
                   class="input   bg-gray-100 w-full rounded-full max-w-xs"
                 />
                 <input
                   type="password"
+                  ref={passwordRef}
                   placeholder="Password"
+                  name="password"
                   class="input mt-5 bg-gray-100 rounded-full w-full max-w-xs"
                 />
               </div>
