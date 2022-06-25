@@ -4,6 +4,8 @@ import React from "react";
 import DashboardBanner from "../DashboardBanner/DashboardBanner";
 import DashboardSubBanner from "../DashboardSubBanner/DashboardSubBanner";
 import DashboardHeader from "../DashHeader/DashboardHeader";
+import { DashboardSubHeader } from "../DashSubHeader/DashboardSubHeader";
+import { TopRetailers } from "../TopRetailers/TopRetailers";
 
 const Dashboard = () => {
   return (
@@ -23,6 +25,8 @@ const Dashboard = () => {
       </div>
       <DashboardBanner></DashboardBanner>
       <DashboardSubBanner></DashboardSubBanner>
+      <DashboardSubHeader></DashboardSubHeader>
+      <TopRetailers></TopRetailers>
     </div>
   );
 };
