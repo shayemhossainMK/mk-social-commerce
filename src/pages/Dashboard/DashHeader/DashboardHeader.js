@@ -4,7 +4,20 @@ import { Link } from "react-router-dom";
 import logo from "../../../imgs/logo/logo.png";
 import photo1 from "../../../imgs/dashboard-header-icon/photo1.png";
 import photo2 from "../../../imgs/dashboard-header-icon/photo2.png";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import photo3 from "../../../imgs/dashboard-header-icon/photo3.png";
+import {
+  faShirt,
+  faStopwatch,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import menu1 from "../../../imgs/dashboard-header-icon/menu1.png";
+import menu4 from "../../../imgs/dashboard-header-icon/menu4.png";
+import menu6 from "../../../imgs/dashboard-header-icon/menu6.png";
+import menu7 from "../../../imgs/dashboard-header-icon/menu7.png";
+import menu8 from "../../../imgs/dashboard-header-icon/menu8.png";
+import menu9 from "../../../imgs/dashboard-header-icon/menu9.png";
+import menu10 from "../../../imgs/dashboard-header-icon/menu10.png";
+import menu11 from "../../../imgs/dashboard-header-icon/menu11.png";
 
 const DashboardHeader = () => {
   return (
@@ -35,16 +48,99 @@ const DashboardHeader = () => {
 
               <ul
                 tabindex="0"
-                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-gray-800"
+                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-72 text-gray-800"
               >
                 <li>
-                  <a>Homepage</a>
+                  <div>
+                    <img className="w-5" src={menu1} alt="" />
+                    <a>Today’s exclusive Offers</a>
+                  </div>
+                </li>
+                <li className="">
+                  <div className="flex">
+                    <div>
+                      <img className="w-5" src={menu1} alt="" />
+                    </div>
+                    <div className="">
+                      <a>Retailer Category</a>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  <a>Portfolio</a>
+                  <div className="flex">
+                    <FontAwesomeIcon
+                      className="text-2xl"
+                      icon={faStopwatch}
+                    ></FontAwesomeIcon>
+                    <a href="">Electronics</a>
+                  </div>
                 </li>
                 <li>
-                  <a>About</a>
+                  <div className="flex">
+                    <div>
+                      <img className="w-6" src={menu4} alt="" />
+                    </div>
+                    <a href="">Men Fashion</a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex">
+                    <div>
+                      <FontAwesomeIcon
+                        className="text-xl"
+                        icon={faShirt}
+                      ></FontAwesomeIcon>
+                    </div>
+                    <a href="">Women Fashion</a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex">
+                    <div>
+                      <img className="w-5" src={menu6} alt="" />
+                    </div>
+                    <a href="">Men Footwear</a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex">
+                    <div>
+                      <img className="w-5" src={menu7} alt="" />
+                    </div>
+                    <a href="">Women Footwear</a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex">
+                    <div>
+                      <img className="w-5" src={menu8} alt="" />
+                    </div>
+                    <a href="">Beauty Products</a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex">
+                    <div>
+                      <img className="w-5" src={menu9} alt="" />
+                    </div>
+                    <a href="">Health & Personal Care</a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex">
+                    <div>
+                      <img className="w-5" src={menu10} alt="" />
+                    </div>
+                    <a href="">Baby Products</a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex">
+                    <div>
+                      <img className="w-4 h-6" src={menu11} alt="" />
+                    </div>
+                    <a href="">Home & Kitchen</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -63,14 +159,18 @@ const DashboardHeader = () => {
             <input
               type="text"
               placeholder="Search Product or Retailer"
-              class="input bg-gray-100 input-sm w-full max-w-2xl px-2 text-xs rounded-full"
+              class="input bg-gray-100 text-black w-full input-sm max-w-2xl px-2 text-xs rounded-full"
             ></input>
-
-            <input
-              type="text"
-              placeholder="Performance Report"
-              class="input input-sm bg-gray-100 w-full max-w-xs mx-5 rounded-full text-xs px-2"
-            />
+            <div className="flex items-center ml-5 md:w-96 md:mr-5 justify-end">
+              <div>
+                <img
+                  className="p-1 w-6 bg-gray-100 rounded-full"
+                  src={photo3}
+                  alt=""
+                />
+              </div>
+              <h3 className="ml-2">Performance Report</h3>
+            </div>
           </div>
           <div className=" grid grid-cols-3 gap-5">
             <div className="flex items-center">
