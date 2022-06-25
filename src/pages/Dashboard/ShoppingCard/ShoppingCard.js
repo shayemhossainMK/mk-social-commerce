@@ -31,7 +31,7 @@ export default class ShoppingCard extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div className="bg-gray-50">
+      <div className="bg-gray-50 max-w-[1280px">
         <div className="px-5 md:px-20 py-10">
           <div className="">
             <Slider ref={(c) => (this.slider = c)} {...settings}>
@@ -77,7 +77,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
@@ -130,7 +130,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
@@ -182,7 +182,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
@@ -235,7 +235,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
@@ -288,7 +288,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
@@ -341,7 +341,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
@@ -394,7 +394,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
@@ -447,7 +447,7 @@ export default class ShoppingCard extends Component {
                       <button className="btn btn-sm btn-primary btn-outline uppercase rounded-full">
                         Copy link
                       </button>
-                      <button className="btn btn-sm text-white btn-success uppercase rounded-full">
+                      <button className="btn btn-sm text-white btn-success uppercase rounded-full hover:bg-green-600">
                         <FontAwesomeIcon
                           className="mr-2"
                           icon={faShare}
