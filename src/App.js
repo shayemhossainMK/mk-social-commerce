@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./pages/Contact/Contact";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
 import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
 import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
 import flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
@@ -38,6 +39,10 @@ function App() {
             element={<Flatprofit></Flatprofit>}
           ></Route>
         </Route>
+        <Route
+          path="/performancereport"
+          element={<PerformanceReport></PerformanceReport>}
+        ></Route>
       </Routes>
     </div>
   );

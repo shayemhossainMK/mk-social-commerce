@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import logo from "../../../imgs/logo/logo.png";
 import photo1 from "../../../imgs/dashboard-header-icon/photo1.png";
 import photo2 from "../../../imgs/dashboard-header-icon/photo2.png";
@@ -18,8 +18,18 @@ import menu8 from "../../../imgs/dashboard-header-icon/menu8.png";
 import menu9 from "../../../imgs/dashboard-header-icon/menu9.png";
 import menu10 from "../../../imgs/dashboard-header-icon/menu10.png";
 import menu11 from "../../../imgs/dashboard-header-icon/menu11.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const DashboardHeader = () => {
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
+  console.log(user);
+  const logout = () => {
+    signOut(auth);
+    navigate("/");
+  };
   return (
     <div>
       <div class="navbar px-5 md:px-20 py-5 bg-primary text-white">
@@ -161,6 +171,7 @@ const DashboardHeader = () => {
               placeholder="Search Product or Retailer"
               class="input bg-gray-100 text-black w-full input-sm max-w-2xl px-2 text-xs rounded-full"
             ></input>
+
             <div className="flex items-center ml-5 md:w-96 md:mr-5 justify-end">
               <div>
                 <img
@@ -169,10 +180,12 @@ const DashboardHeader = () => {
                   alt=""
                 />
               </div>
-              <h3 className="ml-2">Performance Report</h3>
+              <Link to="/performancereport">
+                <h3 className="ml-2">Performance Report</h3>
+              </Link>
             </div>
           </div>
-          <div className=" grid grid-cols-3 gap-5">
+          <div className=" grid grid-cols-3 gap-5 items-center">
             <Link to="/profitrates">
               <div className="flex items-center">
                 <div>
@@ -197,13 +210,43 @@ const DashboardHeader = () => {
               <h3 className="ml-2">Make links</h3>
             </div>
             <div className="flex items-center">
-              <div className="flex items-center">
-                <FontAwesomeIcon
-                  className="text-primary p-1 bg-gray-100 rounded-full"
-                  icon={faUser}
-                ></FontAwesomeIcon>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="flex">
+                  <p>
+                    <FontAwesomeIcon
+                      className="text-primary p-1 bg-gray-100 rounded-full"
+                      icon={faUser}
+                    ></FontAwesomeIcon>
+                  </p>
+                  <p className="ml-2"> My Profile</p>
+                </label>
+                <ul
+                  tabindex="0"
+                  class="mr-[-5rem] dropdown-content menu p-2 shadow bg-base-100 rounded-box w-48 text-gray-900"
+                >
+                  <li>
+                    <a>KAMAO Blogs</a>
+                  </li>
+                  <li>
+                    <a>Profile Settings</a>
+                  </li>
+                  <li>
+                    <a>Payments</a>
+                  </li>
+                  <li>
+                    <a>Referral</a>
+                  </li>
+                  <li>
+                    <a>Support</a>
+                  </li>
+                  <li>
+                    <a>My Activity</a>
+                  </li>
+                  <li>
+                    <p onClick={logout}>Logout</p>
+                  </li>
+                </ul>
               </div>
-              <h3 className="ml-2">My Profile</h3>
             </div>
           </div>
         </div>
