@@ -5,6 +5,8 @@ import DashboardBanner from "../DashboardBanner/DashboardBanner";
 import DashboardSubBanner from "../DashboardSubBanner/DashboardSubBanner";
 import DashboardHeader from "../DashHeader/DashboardHeader";
 import { DashboardSubHeader } from "../DashSubHeader/DashboardSubHeader";
+import ShoppingCard from "../ShoppingCard/ShoppingCard";
+import ShoppingCardForMobile from "../shoppingCardForMobile/ShoppingCardForMobile";
 import { TopRetailers } from "../TopRetailers/TopRetailers";
 
 const Dashboard = () => {
@@ -27,6 +29,12 @@ const Dashboard = () => {
       <DashboardSubBanner></DashboardSubBanner>
       <DashboardSubHeader></DashboardSubHeader>
       <TopRetailers></TopRetailers>
+      <div className="hidden md:block">
+        <ShoppingCard></ShoppingCard>
+      </div>
+      <div className="block md:hidden">
+        <ShoppingCardForMobile></ShoppingCardForMobile>
+      </div>
     </div>
   );
 };

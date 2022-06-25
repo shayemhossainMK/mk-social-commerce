@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const DashboardSubHeader = () => {
   return (
     <div className="my-10">
-      <div className="flex items-center justify-center gap-10 shadow-xl bg-gray-200 py-10 text-primary font-semibold">
+      <div className="flex flex-wrap items-center justify-center gap-10 shadow-xl bg-gray-200 py-10 text-primary font-semibold">
         <Link to="/dashboard">Super Deals</Link>
         <Link to="/dashboard">Accessories</Link>
         <Link to="/dashboard">Man Fashion</Link>
