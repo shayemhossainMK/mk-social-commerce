@@ -207,7 +207,9 @@ const DashboardHeader = () => {
                   alt=""
                 />
               </div>
-              <h3 className="ml-2">Make links</h3>
+              <Link to="/makelink">
+                <h3 className="ml-2">Make links</h3>
+              </Link>
             </div>
             <div className="flex items-center">
               <div class="dropdown dropdown-end">

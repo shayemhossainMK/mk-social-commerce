@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./pages/Contact/Contact";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import MakeLink from "./pages/Dashboard/MakeLink/MakeLink";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
 import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
 import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
@@ -43,6 +44,7 @@ function App() {
           path="/performancereport"
           element={<PerformanceReport></PerformanceReport>}
         ></Route>
+        <Route path="/makelink" element={<MakeLink></MakeLink>}></Route>
       </Routes>
     </div>
   );
