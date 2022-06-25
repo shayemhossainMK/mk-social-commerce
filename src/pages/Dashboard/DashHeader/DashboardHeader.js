@@ -173,16 +173,19 @@ const DashboardHeader = () => {
             </div>
           </div>
           <div className=" grid grid-cols-3 gap-5">
-            <div className="flex items-center">
-              <div>
-                <img
-                  className="p-1 bg-gray-100 rounded-full"
-                  src={photo1}
-                  alt=""
-                />
+            <Link to="/profitrates">
+              <div className="flex items-center">
+                <div>
+                  <img
+                    className="p-1 bg-gray-100 rounded-full"
+                    src={photo1}
+                    alt=""
+                  />
+                </div>
+
+                <h3 className="ml-2">Profit Rates</h3>
               </div>
-              <h3 className="ml-2">Profit Rates</h3>
-            </div>
+            </Link>
             <div className="flex items-center">
               <div>
                 <img

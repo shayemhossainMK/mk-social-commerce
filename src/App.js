@@ -2,6 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./pages/Contact/Contact";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
+import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
+import flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
+import Popular from "./pages/Dashboard/ProfitRates/Popular/Popular";
+import Profit from "./pages/Dashboard/ProfitRates/Profit/Profit";
+import ProfitRates from "./pages/Dashboard/ProfitRates/ProfitRates";
 import Bangla from "./pages/Home/Bangla/Bangla";
 import English from "./pages/Home/English/English";
 import Home from "./pages/Home/Home/Home";
@@ -19,6 +25,19 @@ function App() {
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
+        <Route path="/profitrates" element={<ProfitRates></ProfitRates>}>
+          <Route index element={<Popular></Popular>}></Route>
+          <Route
+            path="/profitrates/popular"
+            element={<Popular></Popular>}
+          ></Route>
+          <Route path="/profitrates/atoz" element={<AtoZ></AtoZ>}></Route>
+          <Route path="/profitrates/profit" element={<Profit></Profit>}></Route>
+          <Route
+            path="/profitrates/flatprofit"
+            element={<Flatprofit></Flatprofit>}
+          ></Route>
+        </Route>
       </Routes>
     </div>
   );
