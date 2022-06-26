@@ -10,6 +10,7 @@ import flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
 import Popular from "./pages/Dashboard/ProfitRates/Popular/Popular";
 import Profit from "./pages/Dashboard/ProfitRates/Profit/Profit";
 import ProfitRates from "./pages/Dashboard/ProfitRates/ProfitRates";
+import ReferAndEarn from "./pages/Dashboard/ReferAndEarn/ReferAndEarn";
 import Bangla from "./pages/Home/Bangla/Bangla";
 import English from "./pages/Home/English/English";
 import Home from "./pages/Home/Home/Home";
@@ -45,6 +46,10 @@ function App() {
           element={<PerformanceReport></PerformanceReport>}
         ></Route>
         <Route path="/makelink" element={<MakeLink></MakeLink>}></Route>
+        <Route
+          path="/referandearn"
+          element={<ReferAndEarn></ReferAndEarn>}
+        ></Route>
       </Routes>
     </div>
   );

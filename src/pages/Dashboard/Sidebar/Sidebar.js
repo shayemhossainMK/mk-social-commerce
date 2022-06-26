@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -26,7 +27,7 @@ const Sidebar = () => {
         </li>{" "}
         <hr />
         <li>
-          <a>Refer & Earn</a>
+          <Link to="/referandearn">Refer & Earn</Link>
         </li>{" "}
         <hr />
         <li>
