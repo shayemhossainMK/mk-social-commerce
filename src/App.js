@@ -5,6 +5,7 @@ import AccountSettings from "./pages/Dashboard/AccountSettings/AccountSettings";
 import ChangePassword from "./pages/Dashboard/AccountSettings/ChangePassword/ChangePassword";
 import PersonalDetails from "./pages/Dashboard/AccountSettings/PersonalDetails/PersonalDetails";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import GetSupport from "./pages/Dashboard/GetSupport/GetSupport";
 import MakeLink from "./pages/Dashboard/MakeLink/MakeLink";
 import MyActivity from "./pages/Dashboard/MyActivity/MyActivity";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
@@ -68,6 +69,7 @@ function App() {
           ></Route>
         </Route>
         <Route path="/myactivity" element={<MyActivity></MyActivity>}></Route>
+        <Route path="/getsupport" element={<GetSupport></GetSupport>}></Route>
       </Routes>
     </div>
   );

@@ -23,7 +23,7 @@ const Sidebar = () => {
         </li>{" "}
         <hr />
         <li>
-          <a>Support</a>
+          <Link to="/getsupport">Support</Link>
         </li>{" "}
         <hr />
         <li>
