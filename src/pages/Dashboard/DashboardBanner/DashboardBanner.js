@@ -14,7 +14,7 @@ const DashboardBanner = () => {
             Earn up to 20% profit
           </p>
         </div>
-        <div className="shadow-xl bg-[#FFA500]">
+        <div className="shadow-xl bg-primary">
           <img
             className=""
             src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW5jb21lfGVufDB8fDB8fA%3D%3D&w=1000&q=80"

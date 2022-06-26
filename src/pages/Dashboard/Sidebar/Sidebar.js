@@ -11,7 +11,7 @@ const Sidebar = () => {
         </li>
         <hr />
         <li>
-          <a>My Earnings</a>
+          <Link to="/myearning">My Earnings</Link>
         </li>{" "}
         <hr />
         <li>
@@ -19,7 +19,7 @@ const Sidebar = () => {
         </li>{" "}
         <hr />
         <li>
-          <a>Payment History</a>
+          <Link to="/paymenthistory">Payment History</Link>
         </li>{" "}
         <hr />
         <li>

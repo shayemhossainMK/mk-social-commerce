@@ -58,7 +58,7 @@ const DashboardHeader = () => {
 
               <ul
                 tabindex="0"
-                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-72 text-gray-800"
+                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-72 text-gray-800 md:ml-[-4rem]"
               >
                 <li>
                   <div>
@@ -230,19 +230,19 @@ const DashboardHeader = () => {
                     <a>KAMAO Blogs</a>
                   </li>
                   <li>
-                    <a>Profile Settings</a>
+                    <Link to="/accountsettings">Profile Settings</Link>
                   </li>
                   <li>
                     <a>Payments</a>
                   </li>
                   <li>
-                    <a>Referral</a>
+                    <Link to="/referandearn">Referral</Link>
                   </li>
                   <li>
-                    <a>Support</a>
+                    <Link to="/getsupport">Support</Link>
                   </li>
                   <li>
-                    <a>My Activity</a>
+                    <Link to="/myactivity">My Activity</Link>
                   </li>
                   <li>
                     <p onClick={logout}>Logout</p>

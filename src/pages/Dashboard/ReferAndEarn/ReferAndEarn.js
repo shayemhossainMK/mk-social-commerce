@@ -24,9 +24,10 @@ const ReferAndEarn = () => {
             </label>
             <div>
               <div>
-                <h1 className="text-2xl font-bold text-center text-primary pb-10">
+                <h1 className="text-2xl font-bold text-center text-primary uppercase">
                   Refer & Earn
                 </h1>
+                <hr className="w-28 mx-auto mt-2  pb-10" />
               </div>
 
               <div className="p-10 shadow-xl rounded-2xl">

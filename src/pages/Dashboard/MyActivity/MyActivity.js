@@ -21,9 +21,10 @@ const MyActivity = () => {
 
             <div>
               <div className="mb-10">
-                <h3 className="text-2xl text-primary font-bold text-center">
+                <h3 className="text-2xl text-primary font-bold text-center uppercase">
                   My Activity
                 </h3>
+                <hr className="w-28 mx-auto mt-2" />
               </div>
               <div className="text-center">
                 <h6 className="font-semibold">

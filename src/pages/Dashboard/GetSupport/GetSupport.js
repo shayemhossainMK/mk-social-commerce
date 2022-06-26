@@ -19,9 +19,10 @@ const GetSupport = () => {
 
             <div className="pb-20">
               <div className="mb-10">
-                <h3 className="text-2xl text-primary font-bold text-center">
+                <h3 className="text-2xl text-primary font-bold text-center uppercase">
                   Get Support
                 </h3>
+                <hr className="w-28 mx-auto mt-2" />
               </div>
               <div className="mt-5 shadow-xl rounded-xl px-1">
                 <div class="overflow-x-auto">

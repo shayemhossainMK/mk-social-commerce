@@ -8,6 +8,9 @@ import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import GetSupport from "./pages/Dashboard/GetSupport/GetSupport";
 import MakeLink from "./pages/Dashboard/MakeLink/MakeLink";
 import MyActivity from "./pages/Dashboard/MyActivity/MyActivity";
+import MyEarning from "./pages/Dashboard/MyEarning/MyEarning";
+import PaymentHistory from "./pages/Dashboard/PaymentHistory/PaymentHistory";
+import paymentHistory from "./pages/Dashboard/PaymentHistory/PaymentHistory";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
 import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
 import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
@@ -70,6 +73,11 @@ function App() {
         </Route>
         <Route path="/myactivity" element={<MyActivity></MyActivity>}></Route>
         <Route path="/getsupport" element={<GetSupport></GetSupport>}></Route>
+        <Route
+          path="/paymenthistory"
+          element={<PaymentHistory></PaymentHistory>}
+        ></Route>
+        <Route path="/myearning" element={<MyEarning></MyEarning>}></Route>
       </Routes>
     </div>
   );
