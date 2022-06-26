@@ -1,6 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./pages/Contact/Contact";
+import AccountSettings from "./pages/Dashboard/AccountSettings/AccountSettings";
+import ChangePassword from "./pages/Dashboard/AccountSettings/ChangePassword/ChangePassword";
+import PersonalDetails from "./pages/Dashboard/AccountSettings/PersonalDetails/PersonalDetails";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import MakeLink from "./pages/Dashboard/MakeLink/MakeLink";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
@@ -50,6 +53,20 @@ function App() {
           path="/referandearn"
           element={<ReferAndEarn></ReferAndEarn>}
         ></Route>
+        <Route
+          path="/accountsettings"
+          element={<AccountSettings></AccountSettings>}
+        >
+          <Route index element={<PersonalDetails></PersonalDetails>}></Route>
+          <Route
+            path="/accountsettings/personaldetails"
+            element={<PersonalDetails></PersonalDetails>}
+          ></Route>
+          <Route
+            path="/accountsettings/changepassword"
+            element={<ChangePassword></ChangePassword>}
+          ></Route>
+        </Route>
       </Routes>
     </div>
   );

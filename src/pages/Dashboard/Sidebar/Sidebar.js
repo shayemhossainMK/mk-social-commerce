@@ -7,7 +7,7 @@ const Sidebar = () => {
       <label for="my-drawer-2" class="drawer-overlay"></label>
       <ul class="menu p-4 overflow-y-auto w-80  rounded-3xl bg-gray-300 shadow-md text-primary">
         <li className="">
-          <a>Performance Report</a>
+          <Link to="/performancereport">Performance Report</Link>
         </li>
         <hr />
         <li>
@@ -31,7 +31,7 @@ const Sidebar = () => {
         </li>{" "}
         <hr />
         <li>
-          <a>Account Setting</a>
+          <Link to="/accountsettings">Account Setting</Link>
         </li>{" "}
         <hr />
         <li>
