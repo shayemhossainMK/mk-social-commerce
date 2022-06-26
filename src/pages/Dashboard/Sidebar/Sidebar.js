@@ -35,7 +35,7 @@ const Sidebar = () => {
         </li>{" "}
         <hr />
         <li>
-          <a>My Activity</a>
+          <Link to="/myactivity">My Activity</Link>
         </li>
       </ul>
     </div>

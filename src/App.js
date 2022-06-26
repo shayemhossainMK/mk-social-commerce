@@ -6,10 +6,10 @@ import ChangePassword from "./pages/Dashboard/AccountSettings/ChangePassword/Cha
 import PersonalDetails from "./pages/Dashboard/AccountSettings/PersonalDetails/PersonalDetails";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import MakeLink from "./pages/Dashboard/MakeLink/MakeLink";
+import MyActivity from "./pages/Dashboard/MyActivity/MyActivity";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
 import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
 import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
-import flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
 import Popular from "./pages/Dashboard/ProfitRates/Popular/Popular";
 import Profit from "./pages/Dashboard/ProfitRates/Profit/Profit";
 import ProfitRates from "./pages/Dashboard/ProfitRates/ProfitRates";
@@ -67,6 +67,7 @@ function App() {
             element={<ChangePassword></ChangePassword>}
           ></Route>
         </Route>
+        <Route path="/myactivity" element={<MyActivity></MyActivity>}></Route>
       </Routes>
     </div>
   );
