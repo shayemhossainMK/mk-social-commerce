@@ -47,6 +47,7 @@ function App() {
   return (
     <div>
       <Routes>
+        {/* This is for english version */}
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/bangla" element={<Bangla></Bangla>}></Route>
         <Route path="/english" element={<English></English>}></Route>
@@ -62,7 +63,14 @@ function App() {
           }
         ></Route>
 
-        {/* This is for english version */}
+        <Route
+          path="/performancereport"
+          element={
+            <RequireAuth>
+              <PerformanceReport></PerformanceReport>
+            </RequireAuth>
+          }
+        ></Route>
 
         <Route
           path="/profitrates"
@@ -84,6 +92,66 @@ function App() {
             element={<Flatprofit></Flatprofit>}
           ></Route>
         </Route>
+        <Route
+          path="/makelink"
+          element={
+            <RequireAuth>
+              <MakeLink></MakeLink>
+            </RequireAuth>
+          }
+        ></Route>
+
+        <Route
+          path="/referandearn"
+          element={
+            <RequireAuth>
+              <ReferAndEarn></ReferAndEarn>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/accountsettings"
+          element={
+            <RequireAuth>
+              <AccountSettings></AccountSettings>
+            </RequireAuth>
+          }
+        >
+          <Route index element={<PersonalDetails></PersonalDetails>}></Route>
+          <Route
+            path="/accountsettings/personaldetails"
+            element={<PersonalDetails></PersonalDetails>}
+          ></Route>
+          <Route
+            path="/accountsettings/changepassword"
+            element={<ChangePassword></ChangePassword>}
+          ></Route>
+        </Route>
+        <Route
+          path="/myactivity"
+          element={
+            <RequireAuth>
+              <MyActivity></MyActivity>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/getsupport"
+          element={
+            <RequireAuth>
+              <GetSupport></GetSupport>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/paymenthistory"
+          element={
+            <RequireAuth>
+              <PaymentHistory></PaymentHistory>
+            </RequireAuth>
+          }
+        ></Route>
+        {/* English version routes end */}
 
         {/* This is for Bangla version */}
         <Route
@@ -97,6 +165,15 @@ function App() {
         <Route
           path="/loginbangla"
           element={<LoginBangla></LoginBangla>}
+        ></Route>
+
+        <Route
+          path="/performancereportbangla"
+          element={
+            <RequireAuth>
+              <PerformanceReportBangla></PerformanceReportBangla>
+            </RequireAuth>
+          }
         ></Route>
 
         <Route
@@ -187,32 +264,6 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        {/* Bangla route finish */}
-
-        <Route
-          path="/performancereport"
-          element={
-            <RequireAuth>
-              <PerformanceReport></PerformanceReport>
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/performancereportbangla"
-          element={
-            <RequireAuth>
-              <PerformanceReportBangla></PerformanceReportBangla>
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/makelink"
-          element={
-            <RequireAuth>
-              <MakeLink></MakeLink>
-            </RequireAuth>
-          }
-        ></Route>
         <Route
           path="/makelinkbangla"
           element={
@@ -221,56 +272,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route
-          path="/referandearn"
-          element={
-            <RequireAuth>
-              <ReferAndEarn></ReferAndEarn>
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/accountsettings"
-          element={
-            <RequireAuth>
-              <AccountSettings></AccountSettings>
-            </RequireAuth>
-          }
-        >
-          <Route index element={<PersonalDetails></PersonalDetails>}></Route>
-          <Route
-            path="/accountsettings/personaldetails"
-            element={<PersonalDetails></PersonalDetails>}
-          ></Route>
-          <Route
-            path="/accountsettings/changepassword"
-            element={<ChangePassword></ChangePassword>}
-          ></Route>
-        </Route>
-        <Route
-          path="/myactivity"
-          element={
-            <RequireAuth>
-              <MyActivity></MyActivity>
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/getsupport"
-          element={
-            <RequireAuth>
-              <GetSupport></GetSupport>
-            </RequireAuth>
-          }
-        ></Route>
-        <Route
-          path="/paymenthistory"
-          element={
-            <RequireAuth>
-              <PaymentHistory></PaymentHistory>
-            </RequireAuth>
-          }
-        ></Route>
+        {/* Bangla route finish */}
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
