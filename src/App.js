@@ -10,7 +10,6 @@ import MakeLink from "./pages/Dashboard/MakeLink/MakeLink";
 import MyActivity from "./pages/Dashboard/MyActivity/MyActivity";
 import MyEarning from "./pages/Dashboard/MyEarning/MyEarning";
 import PaymentHistory from "./pages/Dashboard/PaymentHistory/PaymentHistory";
-import paymentHistory from "./pages/Dashboard/PaymentHistory/PaymentHistory";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
 import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
 import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
@@ -21,7 +20,9 @@ import ReferAndEarn from "./pages/Dashboard/ReferAndEarn/ReferAndEarn";
 import Bangla from "./pages/Home/Bangla/Bangla";
 import English from "./pages/Home/English/English";
 import Home from "./pages/Home/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
 import Login from "./pages/Shared/Login/Login";
+import RequireAuth from "./pages/Shared/RequireAuth/RequireAuth";
 import Signup from "./pages/Shared/Signup/Signup";
 
 function App() {
@@ -34,8 +35,22 @@ function App() {
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
-        <Route path="/profitrates" element={<ProfitRates></ProfitRates>}>
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/profitrates"
+          element={
+            <RequireAuth>
+              <ProfitRates></ProfitRates>
+            </RequireAuth>
+          }
+        >
           <Route index element={<Popular></Popular>}></Route>
           <Route
             path="/profitrates/popular"
@@ -50,16 +65,35 @@ function App() {
         </Route>
         <Route
           path="/performancereport"
-          element={<PerformanceReport></PerformanceReport>}
+          element={
+            <RequireAuth>
+              <PerformanceReport></PerformanceReport>
+            </RequireAuth>
+          }
         ></Route>
-        <Route path="/makelink" element={<MakeLink></MakeLink>}></Route>
+        <Route
+          path="/makelink"
+          element={
+            <RequireAuth>
+              <MakeLink></MakeLink>
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="/referandearn"
-          element={<ReferAndEarn></ReferAndEarn>}
+          element={
+            <RequireAuth>
+              <ReferAndEarn></ReferAndEarn>
+            </RequireAuth>
+          }
         ></Route>
         <Route
           path="/accountsettings"
-          element={<AccountSettings></AccountSettings>}
+          element={
+            <RequireAuth>
+              <AccountSettings></AccountSettings>
+            </RequireAuth>
+          }
         >
           <Route index element={<PersonalDetails></PersonalDetails>}></Route>
           <Route
@@ -71,13 +105,39 @@ function App() {
             element={<ChangePassword></ChangePassword>}
           ></Route>
         </Route>
-        <Route path="/myactivity" element={<MyActivity></MyActivity>}></Route>
-        <Route path="/getsupport" element={<GetSupport></GetSupport>}></Route>
+        <Route
+          path="/myactivity"
+          element={
+            <RequireAuth>
+              <MyActivity></MyActivity>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/getsupport"
+          element={
+            <RequireAuth>
+              <GetSupport></GetSupport>
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="/paymenthistory"
-          element={<PaymentHistory></PaymentHistory>}
+          element={
+            <RequireAuth>
+              <PaymentHistory></PaymentHistory>
+            </RequireAuth>
+          }
         ></Route>
-        <Route path="/myearning" element={<MyEarning></MyEarning>}></Route>
+        <Route
+          path="/myearning"
+          element={
+            <RequireAuth>
+              <MyEarning></MyEarning>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

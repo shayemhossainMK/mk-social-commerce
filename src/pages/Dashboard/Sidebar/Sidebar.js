@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <div class="drawer-side h-[655px] md:p-5">
       <label for="my-drawer-2" class="drawer-overlay"></label>
-      <ul class="menu p-4 overflow-y-auto w-80  rounded-3xl bg-gray-300 shadow-md text-primary">
+      <ul class="menu p-4 overflow-y-auto w-60 md:w-80  rounded-3xl bg-gray-300 shadow-md text-primary">
         <li className="">
           <Link to="/performancereport">Performance Report</Link>
         </li>
