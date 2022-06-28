@@ -2,14 +2,15 @@ import { faArrowDownUpAcrossLine } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import DashboardHeader from "../DashHeader/DashboardHeader";
+import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 import Sidebar from "../Sidebar/Sidebar";
 import SidebarBangla from "../Sidebar/SidebarBangla";
 import Chart from "./Chart/Chart";
 
-const PerformanceReport = () => {
+const PerformanceReportBangla = () => {
   return (
     <div>
-      <DashboardHeader></DashboardHeader>
+      <DashboardHeaderBangla></DashboardHeaderBangla>
       <div>
         <div class="drawer drawer-mobile bg-base-100">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
@@ -23,12 +24,14 @@ const PerformanceReport = () => {
 
             <div>
               <div className="flex">
-                <h3 className="text-2xl font-semibold uppercase">Date</h3>
+                <h3 className="text-2xl font-semibold uppercase">তারিখ</h3>
                 <input
+                  placeholder="শুরুর তারিখ"
                   className="mx-10 border-l-4 border-red-300 bg-gray-100"
                   type="date"
                 />
                 <input
+                  placeholder=""
                   className="border-l-4 border-green-300 bg-gray-100"
                   type="date"
                 />
@@ -41,12 +44,12 @@ const PerformanceReport = () => {
                     className="mr-5"
                     icon={faArrowDownUpAcrossLine}
                   ></FontAwesomeIcon>{" "}
-                  Sort by
+                  সর্ট করুন
                 </p>
-                <p>Comapny</p>
-                <p>Order</p>
-                <p>Click</p>
-                <p>Estimated Earning</p>
+                <p className="border-l-2 border-gray-600 pl-2">কোম্পানি</p>
+                <p>অর্ডার</p>
+                <p>কিলিক</p>
+                <p>সম্ভাব্য আয়</p>
               </div>
             </div>
             <div className="shadow-md rounded-3xl bg-gray-200 p-5">
@@ -62,4 +65,4 @@ const PerformanceReport = () => {
   );
 };
 
-export default PerformanceReport;
+export default PerformanceReportBangla;

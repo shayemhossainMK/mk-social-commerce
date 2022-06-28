@@ -22,7 +22,7 @@ const FooterBangla = () => {
                   সাহায্য পেতে
                 </li>
                 <li className="hover:underline hover:text-secondary hover:cursor-pointer">
-                  <Link className="text-sm" to="/contact">
+                  <Link className="text-sm" to="/contactbangla">
                     যোগাযোগ করুন
                   </Link>
                 </li>

@@ -8,7 +8,7 @@ const HomeHeaderBangla = () => {
       <Link to="/">
         <div className="flex justify-center">
           <img className="w-10 mr-3" src={logo} alt="" />
-          <h1 className="text-3xl text-white uppercase font-bold">কামাও</h1>
+          <h1 className="text-3xl text-white uppercase font-bold">Kamao</h1>
         </div>
       </Link>
     </div>

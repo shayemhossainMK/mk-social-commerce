@@ -1,29 +1,47 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./pages/Contact/Contact";
+import ContactBangla from "./pages/Contact/ContactBangla";
 import AccountSettings from "./pages/Dashboard/AccountSettings/AccountSettings";
+import AccountSettingsBangla from "./pages/Dashboard/AccountSettings/AccountSettingsBangla";
 import ChangePassword from "./pages/Dashboard/AccountSettings/ChangePassword/ChangePassword";
+import ChangePasswordBangla from "./pages/Dashboard/AccountSettings/ChangePassword/ChangePasswordBangla";
 import PersonalDetails from "./pages/Dashboard/AccountSettings/PersonalDetails/PersonalDetails";
+import PersonalDetailsBangla from "./pages/Dashboard/AccountSettings/PersonalDetails/PersonalDetailsBangla";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import GetSupport from "./pages/Dashboard/GetSupport/GetSupport";
+import GetSupportBangla from "./pages/Dashboard/GetSupport/GetSupportBangla";
 import MakeLink from "./pages/Dashboard/MakeLink/MakeLink";
+import MakeLinkBangla from "./pages/Dashboard/MakeLink/MakeLinkBangla";
 import MyActivity from "./pages/Dashboard/MyActivity/MyActivity";
+import MyActivityBangla from "./pages/Dashboard/MyActivity/MyActivitybangla";
 import MyEarning from "./pages/Dashboard/MyEarning/MyEarning";
+import MyEarningBangla from "./pages/Dashboard/MyEarning/MyEarningBangla";
 import PaymentHistory from "./pages/Dashboard/PaymentHistory/PaymentHistory";
+import PaymentHistoryBangla from "./pages/Dashboard/PaymentHistory/PaymentHistoryBangla";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
+import PerformanceReportBangla from "./pages/Dashboard/PerformanceReport/PerformanceReportBangla";
 import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
+import AtoZBangla from "./pages/Dashboard/ProfitRates/AtoZ/AtoZBangla";
 import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
+import FlatprofitBangla from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfitBangla";
 import Popular from "./pages/Dashboard/ProfitRates/Popular/Popular";
+import PopularBangla from "./pages/Dashboard/ProfitRates/Popular/PopularBangla";
 import Profit from "./pages/Dashboard/ProfitRates/Profit/Profit";
+import ProfitBangla from "./pages/Dashboard/ProfitRates/Profit/ProfitBangla";
 import ProfitRates from "./pages/Dashboard/ProfitRates/ProfitRates";
+import ProfitRatesBangla from "./pages/Dashboard/ProfitRates/ProfitRatesBangla";
 import ReferAndEarn from "./pages/Dashboard/ReferAndEarn/ReferAndEarn";
+import ReferAndEarnBangla from "./pages/Dashboard/ReferAndEarn/ReferAndEarnBangla";
 import Bangla from "./pages/Home/Bangla/Bangla";
 import English from "./pages/Home/English/English";
 import Home from "./pages/Home/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Login from "./pages/Shared/Login/Login";
+import LoginBangla from "./pages/Shared/Login/LoginBangla";
 import RequireAuth from "./pages/Shared/RequireAuth/RequireAuth";
 import Signup from "./pages/Shared/Signup/Signup";
+import SignupBangla from "./pages/Shared/Signup/SignupBangla";
 
 function App() {
   return (
@@ -43,6 +61,9 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+
+        {/* This is for english version */}
+
         <Route
           path="/profitrates"
           element={
@@ -63,6 +84,111 @@ function App() {
             element={<Flatprofit></Flatprofit>}
           ></Route>
         </Route>
+
+        {/* This is for Bangla version */}
+        <Route
+          path="/contactbangla"
+          element={<ContactBangla></ContactBangla>}
+        ></Route>
+        <Route
+          path="/signupbangla"
+          element={<SignupBangla></SignupBangla>}
+        ></Route>
+        <Route
+          path="/loginbangla"
+          element={<LoginBangla></LoginBangla>}
+        ></Route>
+
+        <Route
+          path="/profitratesbangla"
+          element={
+            <RequireAuth>
+              <ProfitRatesBangla></ProfitRatesBangla>
+            </RequireAuth>
+          }
+        >
+          <Route index element={<AtoZBangla></AtoZBangla>}></Route>
+          <Route
+            path="/profitratesbangla/popularbangla"
+            element={<PopularBangla></PopularBangla>}
+          ></Route>
+          <Route
+            path="/profitratesbangla/atozbangla"
+            element={<AtoZBangla></AtoZBangla>}
+          ></Route>
+          <Route
+            path="/profitratesbangla/profitbangla"
+            element={<ProfitBangla></ProfitBangla>}
+          ></Route>
+          <Route
+            path="/profitratesbangla/flatprofitbangla"
+            element={<FlatprofitBangla></FlatprofitBangla>}
+          ></Route>
+        </Route>
+        <Route
+          path="/myearningbangla"
+          element={
+            <RequireAuth>
+              <MyEarningBangla></MyEarningBangla>
+            </RequireAuth>
+          }
+        ></Route>
+
+        <Route
+          path="/paymenthistorybangla"
+          element={
+            <RequireAuth>
+              <PaymentHistoryBangla></PaymentHistoryBangla>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/getsupportbangla"
+          element={
+            <RequireAuth>
+              <GetSupportBangla></GetSupportBangla>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/accountsettingsbangla"
+          element={
+            <RequireAuth>
+              <AccountSettingsBangla></AccountSettingsBangla>
+            </RequireAuth>
+          }
+        >
+          <Route
+            index
+            element={<PersonalDetailsBangla></PersonalDetailsBangla>}
+          ></Route>
+          <Route
+            path="/accountsettingsbangla/personaldetailsbangla"
+            element={<PersonalDetailsBangla></PersonalDetailsBangla>}
+          ></Route>
+          <Route
+            path="/accountsettingsbangla/changepasswordbangla"
+            element={<ChangePasswordBangla></ChangePasswordBangla>}
+          ></Route>
+        </Route>
+        <Route
+          path="/myactivitybangla"
+          element={
+            <RequireAuth>
+              <MyActivityBangla></MyActivityBangla>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/referandearnbangla"
+          element={
+            <RequireAuth>
+              <ReferAndEarnBangla></ReferAndEarnBangla>
+            </RequireAuth>
+          }
+        ></Route>
+        {/* Bangla route finish */}
+
         <Route
           path="/performancereport"
           element={
@@ -72,10 +198,26 @@ function App() {
           }
         ></Route>
         <Route
+          path="/performancereportbangla"
+          element={
+            <RequireAuth>
+              <PerformanceReportBangla></PerformanceReportBangla>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
           path="/makelink"
           element={
             <RequireAuth>
               <MakeLink></MakeLink>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/makelinkbangla"
+          element={
+            <RequireAuth>
+              <MakeLinkBangla></MakeLinkBangla>
             </RequireAuth>
           }
         ></Route>
@@ -129,14 +271,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route
-          path="/myearning"
-          element={
-            <RequireAuth>
-              <MyEarning></MyEarning>
-            </RequireAuth>
-          }
-        ></Route>
+
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

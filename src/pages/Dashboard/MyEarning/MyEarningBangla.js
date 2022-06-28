@@ -8,10 +8,11 @@ import photo4 from "../../../imgs/earning-icon/photo4.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDollar } from "@fortawesome/free-solid-svg-icons";
 import SidebarBangla from "../Sidebar/SidebarBangla";
-const MyEarning = () => {
+import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
+const MyEarningBangla = () => {
   return (
     <div>
-      <DashboardHeader></DashboardHeader>
+      <DashboardHeaderBangla></DashboardHeaderBangla>
       <div>
         <div class="drawer drawer-mobile bg-base-100 pb-10">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
@@ -25,19 +26,19 @@ const MyEarning = () => {
             <div className="md:w-[700px]">
               <div className="mb-10">
                 <h3 className="text-2xl text-primary font-bold text-center uppercase">
-                  My Earning
+                  আমার আয়
                 </h3>
                 <hr className="w-28 mx-auto mt-2" />
               </div>
               <div className="shadow-xl rounded-2xl bg-gray-100 ">
                 <div className="border-b-2 border-dashed py-3 px-10 ">
-                  <h4 className="text-xl text-primary">Estimated Earnings*</h4>
+                  <h4 className="text-xl text-primary">সম্ভাব্য আয়*</h4>
                   <h1 className="text-primary text-2xl font-semibold mt-2">
-                    BDT 0.00
+                    টাকা 0.00
                   </h1>
                 </div>
                 <p className="mt-2 px-10 pb-3">
-                  Profit will appear here within certain period
+                  আপনার আয়ের পরিমান এখানে দেখানো হবে
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:py-20">
@@ -48,10 +49,10 @@ const MyEarning = () => {
                     alt=""
                   />
                   <h2 className="border-b-2 border-dashed py-4 font-semibold">
-                    Oder Details
+                    অর্ডার বিবরনি
                   </h2>
                   <p className="py-2">
-                    View more{" "}
+                    আরও দেখুন{" "}
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                   </p>
                 </div>
@@ -62,10 +63,10 @@ const MyEarning = () => {
                     alt=""
                   />
                   <h2 className="border-b-2 border-dashed py-4 font-semibold">
-                    My Activity
+                    আমার এক্টিভিটি
                   </h2>
                   <p className="py-2">
-                    View more{" "}
+                    আরও দেখুন{" "}
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                   </p>
                 </div>
@@ -75,10 +76,10 @@ const MyEarning = () => {
                     icon={faDollar}
                   ></FontAwesomeIcon>
                   <h2 className="border-b-2 border-dashed py-4 font-semibold">
-                    Request Pay
+                    পেমেন্ট আবেদন
                   </h2>
                   <p className="py-2">
-                    View more{" "}
+                    আরও দেখুন{" "}
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                   </p>
                 </div>
@@ -90,10 +91,10 @@ const MyEarning = () => {
                     alt=""
                   />
                   <h2 className="border-b-2 border-dashed py-4 font-semibold">
-                    Get Help
+                    সাহায্য পেতে
                   </h2>
                   <p className="py-2">
-                    View more{" "}
+                    আরও দেখুন{" "}
                     <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                   </p>
                 </div>
@@ -109,4 +110,4 @@ const MyEarning = () => {
   );
 };
 
-export default MyEarning;
+export default MyEarningBangla;

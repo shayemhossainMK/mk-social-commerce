@@ -1,12 +1,13 @@
 import React from "react";
 import DashboardHeader from "../DashHeader/DashboardHeader";
+import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 import Sidebar from "../Sidebar/Sidebar";
 import SidebarBangla from "../Sidebar/SidebarBangla";
 
-const GetSupport = () => {
+const GetSupportBangla = () => {
   return (
     <div>
-      <DashboardHeader></DashboardHeader>
+      <DashboardHeaderBangla></DashboardHeaderBangla>
       <div>
         <div class="drawer drawer-mobile bg-base-100 pb-10">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
@@ -21,7 +22,7 @@ const GetSupport = () => {
             <div className="pb-20">
               <div className="mb-10">
                 <h3 className="text-2xl text-primary font-bold text-center uppercase">
-                  Get Support
+                  সাপোর্ট
                 </h3>
                 <hr className="w-28 mx-auto mt-2" />
               </div>
@@ -30,10 +31,10 @@ const GetSupport = () => {
                   <table class="table w-full ">
                     <thead>
                       <tr>
-                        <th>Ticket no</th>
-                        <th>Date of Order</th>
-                        <th>Issue</th>
-                        <th>Product name/SKU</th>
+                        <th>টিকেট নং</th>
+                        <th>অর্ডারের তারিখ</th>
+                        <th>সমস্যা</th>
+                        <th>পণ্যের নাম/SKU</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -48,27 +49,27 @@ const GetSupport = () => {
                 </div>
                 <div className="text-end py-5 px-5">
                   <button className="btn btn-primary rounded-full text-white btn-sm hover:scale-105 hover:rotate-2 duration-300 hover:bg-secondary shadow-md">
-                    View more
+                    আরও দেখুন
                   </button>
                 </div>
               </div>
               <div className="py-16 text-center md:w-[700px] shadow-xl rounded-2xl mt-10 p-5 bg-gray-200">
                 <h4 className="text-primary font-semibold text-xl text-center mb-5">
-                  Need Help?
+                  সাহায্য দরকার?
                 </h4>
-                <p className="mb-5">
-                  If you got an order via KAMAO, and did not get Profit, don't
-                  worry! Just raise a Missing Profit Ticket and our team will
-                  escalate it to their retailer.
+                <p className="mb-5 ">
+                  আপনি যদি KAMAO এর মাধ্যমে অর্ডার পেয়ে থাকেন, এবং মুনাফা না
+                  পান! তাহলে মুনাফার জন্য আবেদন করুন। আমাদের টিম এটি প্রসেস করবে
+                  ।
                 </p>
-                <p>
-                  Please note that the retailers accept Missing Profit claims
-                  only within 10 days from the date of transaction.
+                <p className="text-red-600">
+                  বিঃ দ্রঃ খুচরা বিক্রেতারা লেনদেনের তারিখ থেকে 10 দিনের মধ্যে
+                  মিসিং মুনাফার দাবিগুলি গ্রহণ করে৷
                 </p>
               </div>
               <div className="text-center mt-10">
                 <button className="btn btn-primary rounded-full px-5 text-white btn-sm  hover:scale-105 hover:rotate-2 hover:bg-secondary duration-500">
-                  Add Ticket
+                  এড টিকেট
                 </button>
               </div>
             </div>
@@ -82,4 +83,4 @@ const GetSupport = () => {
   );
 };
 
-export default GetSupport;
+export default GetSupportBangla;

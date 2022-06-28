@@ -2,13 +2,14 @@ import { faArrowDownUpAcrossLine } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import DashboardHeader from "../DashHeader/DashboardHeader";
+import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 import Sidebar from "../Sidebar/Sidebar";
 import SidebarBangla from "../Sidebar/SidebarBangla";
 
-const MyActivity = () => {
+const MyActivityBangla = () => {
   return (
     <div>
-      <DashboardHeader></DashboardHeader>
+      <DashboardHeaderBangla></DashboardHeaderBangla>
       <div>
         <div class="drawer drawer-mobile bg-base-100 pb-10">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
@@ -23,17 +24,17 @@ const MyActivity = () => {
             <div>
               <div className="mb-10">
                 <h3 className="text-2xl text-primary font-bold text-center uppercase">
-                  My Activity
+                  আমার এক্টিভিটি
                 </h3>
                 <hr className="w-28 mx-auto mt-2" />
               </div>
               <div className="text-center">
                 <h6 className="font-semibold">
-                  Review your Shares, Clicks and Transactions below
+                  নীচে আপনার শেয়ার, ক্লিক এবং লেনদেন দেখুন
                 </h6>
                 <p>
-                  Number of transactions will reflect only when the Profit gets
-                  tracked (within 72 hours)
+                  মুনাফা ট্র্যাক করা হলেই লেনদেনের সংখ্যা দেখা যাবে (৭২ ঘণ্টার
+                  মধ্যে)
                 </p>
                 <div>
                   <div className="flex justify-evenly mx-auto w-[700px] bg-gray-100 p-2 my-10 rounded-md shadow-md">
@@ -42,18 +43,18 @@ const MyActivity = () => {
                         className="mr-5"
                         icon={faArrowDownUpAcrossLine}
                       ></FontAwesomeIcon>{" "}
-                      Sort by
+                      সর্ট করুন
                     </p>
-                    <p className="border-l-2 border-gray-600 pl-2">Date</p>
-                    <p>Clicks</p>
-                    <p>Height Earnings</p>
-                    <p>Transactions</p>
+                    <p className="border-l-2 border-gray-600 pl-2">তারিখ</p>
+                    <p>ক্লিক</p>
+                    <p>সর্বোচ্চ আয়</p>
+                    <p>লেনদেন</p>
                   </div>
 
                   <div className="py-10">
                     <div>
                       <h3 className="text-center text-xl font-semibold">
-                        Share Link Details
+                        শেয়ার লিংকের বিস্তারিত
                       </h3>
                       <div>
                         <div className="text-end ">
@@ -67,12 +68,12 @@ const MyActivity = () => {
                             <table class="table w-full">
                               <thead>
                                 <tr>
-                                  <th>Shared ID</th>
-                                  <th>Shared Date & Time</th>
-                                  <th>Retailer Name</th>
-                                  <th>No of Clicks</th>
-                                  <th>No of Orders</th>
-                                  <th>Total Earnings</th>
+                                  <th>শেয়ার আইডি</th>
+                                  <th>শেয়ার তারিখ ও সময়</th>
+                                  <th>খুচরা বিক্রেতার নাম</th>
+                                  <th>ক্লিক নং</th>
+                                  <th>অর্ডার সংখ্যা</th>
+                                  <th>মোট আয়</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -96,11 +97,12 @@ const MyActivity = () => {
             </div>
           </div>
 
-          <Sidebar></Sidebar>
+          {/* <Sidebar></Sidebar> */}
+          <SidebarBangla></SidebarBangla>
         </div>
       </div>
     </div>
   );
 };
 
-export default MyActivity;
+export default MyActivityBangla;

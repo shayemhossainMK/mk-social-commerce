@@ -8,11 +8,12 @@ import messenger from "../../../imgs/home-social/messenger.png";
 import wapp from "../../../imgs/home-social/wapp.png";
 import telegram from "../../../imgs/home-social/telegram.png";
 import SidebarBangla from "../Sidebar/SidebarBangla";
+import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 
-const ReferAndEarn = () => {
+const ReferAndEarnBangla = () => {
   return (
     <div>
-      <DashboardHeader></DashboardHeader>
+      <DashboardHeaderBangla></DashboardHeaderBangla>
       <div>
         <div class="drawer drawer-mobile bg-base-100">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
@@ -26,7 +27,7 @@ const ReferAndEarn = () => {
             <div>
               <div>
                 <h1 className="text-2xl font-bold text-center text-primary uppercase">
-                  Refer & Earn
+                  রেফার & আয়
                 </h1>
                 <hr className="w-28 mx-auto mt-2  pb-10" />
               </div>
@@ -34,11 +35,11 @@ const ReferAndEarn = () => {
               <div className="p-10 shadow-xl rounded-2xl">
                 <div className="flex  md:w-[500px] justify-between text-primary border-b-2 border-dashed border-gray-400 pb-3 ">
                   <div>
-                    <p>Earnings from Referral</p>
-                    <h4 className=" font-bold mt-2 text-xl">BDT 0.00</h4>
+                    <p>রেফারাল থেকে আয়</p>
+                    <h4 className=" font-bold mt-2 text-xl">টাকা 0.00</h4>
                   </div>
                   <div>
-                    <p>Number of Refers</p>
+                    <p>রেফারাল সংখ্যা</p>
                     <h4 className="font-bold mt-2 text-xl">0</h4>
                   </div>
                 </div>
@@ -47,12 +48,11 @@ const ReferAndEarn = () => {
               <div className="shadow-xl rounded-2xl bg-gray-200 my-10">
                 <div className="py-10 text-center">
                   <h4 className="text-center font-semibold text-primary mb-4">
-                    Help Friends Earn!
+                    বন্ধুদের উপার্জনে সাহায্য করুন
                   </h4>
                   <p className="text-center">
-                    Invite Friends to KAMAO <br />
-                    Share your invite code & get 10% of the profit your friends
-                    make forever!
+                    কামাওতে বন্ধুদের আমন্ত্রণ জানান <br /> আপনার আমন্ত্রণ কোড
+                    শেয়ার করুন এবং আপনার বন্ধুর লাভ থেকে ১0% পান!
                   </p>
                   <div className="flex items-center justify-center mt-5 ">
                     <div className="flex items-center bg-primary rounded-full text-white p-2.5 mr-[-3rem] z-20">
@@ -60,17 +60,18 @@ const ReferAndEarn = () => {
                         className="mr-2"
                         icon={faLink}
                       ></FontAwesomeIcon>{" "}
-                      <p>Your referral link</p>
+                      <p>আপনার রেফারাল লিংক</p>
                     </div>
                     <div className="z-10 ">
                       <input
                         type="text"
-                        placeholder="Paste your link"
+                        placeholder="https://kamao.com?r=2039664&fname=Your+name
+                        "
                         class="input input-bordered pl-16 w-full max-w-xs px-10  rounded-r-full focus:outline-none"
                       />
                     </div>
                   </div>
-                  <p className="my-7">Share by social media</p>
+                  <p className="my-7">সোশ্যাল মিডিয়াতে শেয়ার করুন</p>
                   <div className="flex justify-center mt-5">
                     <a href="">
                       <img
@@ -106,11 +107,11 @@ const ReferAndEarn = () => {
             </div>
           </div>
 
-          <Sidebar></Sidebar>
+          <SidebarBangla></SidebarBangla>
         </div>
       </div>
     </div>
   );
 };
 
-export default ReferAndEarn;
+export default ReferAndEarnBangla;

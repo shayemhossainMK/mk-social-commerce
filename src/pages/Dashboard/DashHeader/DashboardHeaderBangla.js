@@ -182,11 +182,11 @@ const DashboardHeaderBangla = () => {
                   alt=""
                 />
               </div>
-              <Link to="/performancereport">
+              <Link to="/performancereportbangla">
                 <h3 className="ml-2">পারফরমেন্স রিপোর্ট</h3>
               </Link>
             </div>
-            <Link to="/profitrates">
+            <Link to="/profitratesbangla">
               <div className="flex items-center">
                 <div>
                   <img
@@ -207,7 +207,7 @@ const DashboardHeaderBangla = () => {
                   alt=""
                 />
               </div>
-              <Link to="/makelink">
+              <Link to="/makelinkbangla">
                 <h3 className="ml-2">মেইক লিংক</h3>
               </Link>
             </div>

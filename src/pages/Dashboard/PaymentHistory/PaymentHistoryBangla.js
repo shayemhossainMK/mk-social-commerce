@@ -1,12 +1,13 @@
 import React from "react";
 import DashboardHeader from "../DashHeader/DashboardHeader";
+import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 import Sidebar from "../Sidebar/Sidebar";
 import SidebarBangla from "../Sidebar/SidebarBangla";
 
-const PaymentHistory = () => {
+const PaymentHistoryBangla = () => {
   return (
     <div>
-      <DashboardHeader></DashboardHeader>
+      <DashboardHeaderBangla></DashboardHeaderBangla>
       <div>
         <div class="drawer drawer-mobile bg-base-100 pb-10">
           <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
@@ -21,7 +22,7 @@ const PaymentHistory = () => {
             <div>
               <div className="mb-10">
                 <h3 className="text-2xl text-primary font-bold text-center uppercase">
-                  Payment History
+                  পেমেন্ট হিস্টরি
                 </h3>
                 <hr className="w-28 mx-auto mt-2" />
               </div>
@@ -30,26 +31,26 @@ const PaymentHistory = () => {
                   <div className="mx-5">
                     <input
                       type="text"
-                      placeholder="Search by Invoice"
+                      placeholder="চালান নম্বর দিয়ে খুঁজুন"
                       class="input input-bordered input-sm w-full max-w-xs"
                     />
                   </div>
                   <div className="flex items-center">
-                    <p className="font-semibold ">Date</p>
+                    <p className="font-semibold mr-2 ">তারিখ</p>
                     <input
                       type="date"
                       placeholder="Type here"
-                      class="input input-sm focus:outline-none w-full max-w-xs"
+                      class="input input-sm focus:outline-none w-full max-w-xs input-bordered"
                     />
                     <p>-</p>
                     <input
                       type="date"
                       placeholder="Type here"
-                      class="input input-sm w-full focus:outline-none max-w-xs"
+                      class="input input-sm w-full focus:outline-none max-w-xs input-bordered"
                     />
                   </div>
-                  <p className="rounded-full btn  btn-primary btn-xs px-2  text-white">
-                    Download Report
+                  <p className="rounded-full btn  btn-primary btn-xs px-2 ml-3 text-white">
+                    ডাউনলড রিপোর্ট
                   </p>
                 </div>
               </div>
@@ -61,13 +62,13 @@ const PaymentHistory = () => {
                         <table class="table w-full ">
                           <thead>
                             <tr>
-                              <th>Invice Id</th>
-                              <th>Billing Period</th>
-                              <th>Net Orders</th>
-                              <th>Comission Earned</th>
-                              <th>Bonus Earned</th>
-                              <th>Total Earning</th>
-                              <th>Action</th>
+                              <th>চালান আইডি</th>
+                              <th>বিলিং পিরিওড</th>
+                              <th>নেট অর্ডার</th>
+                              <th>কমিশন আয়</th>
+                              <th>বোনাস আয়</th>
+                              <th>মোট আয়</th>
+                              <th>চালান রিপ</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -80,7 +81,7 @@ const PaymentHistory = () => {
                               <td>100</td>
                               <td>
                                 <p className="btn btn-primary btn-xs text-white rounded-full px-3">
-                                  Download
+                                  চালান ডাউনলড
                                 </p>
                               </td>
                             </tr>
@@ -93,7 +94,7 @@ const PaymentHistory = () => {
                               <td>100</td>
                               <td>
                                 <p className="btn btn-primary btn-xs text-white rounded-full px-3">
-                                  Download
+                                  চালান ডাউনলড
                                 </p>
                               </td>
                             </tr>
@@ -115,4 +116,4 @@ const PaymentHistory = () => {
   );
 };
 
-export default PaymentHistory;
+export default PaymentHistoryBangla;
