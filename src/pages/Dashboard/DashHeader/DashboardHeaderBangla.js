@@ -230,19 +230,19 @@ const DashboardHeaderBangla = () => {
                     <a>KAMAO ব্লগ</a>
                   </li>
                   <li>
-                    <Link to="/accountsettings">প্রোফাইল সেটিংস</Link>
+                    <Link to="/accountsettingsbangla">প্রোফাইল সেটিংস</Link>
                   </li>
                   <li>
                     <a>পেমেন্ট</a>
                   </li>
                   <li>
-                    <Link to="/referandearn">সুপারিশ</Link>
+                    <Link to="/referandearnbangla">সুপারিশ</Link>
                   </li>
                   <li>
-                    <Link to="/getsupport">সাপোর্ট</Link>
+                    <Link to="/getsupportbangla">সাপোর্ট</Link>
                   </li>
                   <li>
-                    <Link to="/myactivity">আমার এক্টিভিটি</Link>
+                    <Link to="/myactivitybangla">আমার এক্টিভিটি</Link>
                   </li>
                   <li>
                     <p onClick={logout}>লগ আউট</p>
