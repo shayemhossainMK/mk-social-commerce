@@ -281,11 +281,9 @@ function App() {
         <Route
           path="/alluserbangla"
           element={
-            <RequireAuth>
-              <RequireAdmin>
-                <AllUserBangla></AllUserBangla>
-              </RequireAdmin>
-            </RequireAuth>
+            <RequireAdmin>
+              <AllUserBangla></AllUserBangla>
+            </RequireAdmin>
           }
         ></Route>
 
