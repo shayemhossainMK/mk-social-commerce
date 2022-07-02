@@ -6,7 +6,7 @@ import AllUserBanglaRow from "./AllUserBanglaRow";
 const AllUserBangla = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/user`)
+    fetch(`https://immense-wave-15306.herokuapp.com/user`)
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, [users]);
