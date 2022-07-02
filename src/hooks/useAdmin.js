@@ -8,13 +8,10 @@ const useAdmin = (user) => {
     if (email) {
       fetch(`https://protected-gorge-55622.herokuapp.com/admin/${email}`, {
         method: "GET",
-        headers: {
-          "contant-type": "application/json",
-        },
       })
         .then((res) => res.json())
         .then((data) => {
-          setAdmin(data.admin);
+          setAdmin(data?.admin);
           setAdminLoading(false);
         });
     }
