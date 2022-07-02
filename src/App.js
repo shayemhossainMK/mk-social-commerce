@@ -1,5 +1,8 @@
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import auth from "./firebase.init";
+import useAdmin from "./hooks/useAdmin";
 import Contact from "./pages/Contact/Contact";
 import ContactBangla from "./pages/Contact/ContactBangla";
 import AccountSettings from "./pages/Dashboard/AccountSettings/AccountSettings";
@@ -8,6 +11,7 @@ import ChangePassword from "./pages/Dashboard/AccountSettings/ChangePassword/Cha
 import ChangePasswordBangla from "./pages/Dashboard/AccountSettings/ChangePassword/ChangePasswordBangla";
 import PersonalDetails from "./pages/Dashboard/AccountSettings/PersonalDetails/PersonalDetails";
 import PersonalDetailsBangla from "./pages/Dashboard/AccountSettings/PersonalDetails/PersonalDetailsBangla";
+import AllUserBangla from "./pages/Dashboard/AllUser/AllUserBangla";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import GetSupport from "./pages/Dashboard/GetSupport/GetSupport";
 import GetSupportBangla from "./pages/Dashboard/GetSupport/GetSupportBangla";
@@ -39,6 +43,7 @@ import Home from "./pages/Home/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Login from "./pages/Shared/Login/Login";
 import LoginBangla from "./pages/Shared/Login/LoginBangla";
+import RequireAdmin from "./pages/Shared/RequireAdmin/RequireAdmin";
 import RequireAuth from "./pages/Shared/RequireAuth/RequireAuth";
 import Signup from "./pages/Shared/Signup/Signup";
 import SignupBangla from "./pages/Shared/Signup/SignupBangla";
@@ -272,6 +277,18 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+
+        <Route
+          path="/alluserbangla"
+          element={
+            <RequireAuth>
+              <RequireAdmin>
+                <AllUserBangla></AllUserBangla>
+              </RequireAdmin>
+            </RequireAuth>
+          }
+        ></Route>
+
         {/* Bangla route finish */}
 
         <Route path="*" element={<NotFound></NotFound>}></Route>

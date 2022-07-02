@@ -1,5 +1,8 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../../firebase.init";
+import useAdmin from "../../../hooks/useAdmin";
 import photo1 from "../../../imgs/sidebar-icon/photo1.svg";
 import photo2 from "../../../imgs/sidebar-icon/photo2.svg";
 import photo3 from "../../../imgs/sidebar-icon/photo3.svg";
@@ -10,6 +13,9 @@ import photo7 from "../../../imgs/sidebar-icon/photo7.svg";
 import photo8 from "../../../imgs/sidebar-icon/photo8.svg";
 
 const SidebarBangla = () => {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
+
   return (
     <div class="drawer-side h-[655px] md:p-5">
       <label for="my-drawer-2" class="drawer-overlay"></label>
@@ -63,6 +69,16 @@ const SidebarBangla = () => {
             <img className="w-5" src={photo8} alt="" />
             আমার এক্টিভিটি
           </Link>
+        </li>
+        <li>
+          {admin ? (
+            <Link to="/alluserbangla">
+              <img className="w-5" src={photo8} alt="" />
+              All User
+            </Link>
+          ) : (
+            ""
+          )}
         </li>
       </ul>
     </div>

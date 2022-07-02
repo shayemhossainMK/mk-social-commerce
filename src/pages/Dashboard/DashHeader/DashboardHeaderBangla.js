@@ -25,7 +25,7 @@ import { signOut } from "firebase/auth";
 const DashboardHeaderBangla = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
-  console.log(user);
+  // console.log(user);
   const logout = () => {
     signOut(auth);
     navigate("/");
@@ -220,7 +220,7 @@ const DashboardHeaderBangla = () => {
                       icon={faUser}
                     ></FontAwesomeIcon>
                   </p>
-                  <p className="ml-2">প্রোফাইল</p>
+                  <p className="ml-2">{user ? user.displayName : "প্রোফাইল"}</p>
                 </label>
                 <ul
                   tabindex="0"

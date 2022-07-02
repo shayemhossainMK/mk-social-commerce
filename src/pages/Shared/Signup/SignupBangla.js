@@ -10,6 +10,8 @@ import {
 import auth from "../../../firebase.init";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
+import useToken from "../../../hooks/useToken";
+import { useUpdateProfile } from "react-firebase-hooks/auth";
 
 const SignupBangla = () => {
   const [createUserWithEmailAndPassword, user, error] =
@@ -18,21 +20,29 @@ const SignupBangla = () => {
     useSignInWithGoogle(auth);
   const [signInWithFacebook, facebookUser, facebookLoading, facebookError] =
     useSignInWithFacebook(auth);
+  const [updateProfile] = useUpdateProfile(auth);
   const navigate = useNavigate();
 
-  const handleSignup = (e) => {
+  const [token] = useToken(user || googleUser || facebookUser);
+  console.log(token);
+
+  const handleSignup = async (e) => {
     e.preventDefault();
 
+    const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     const cpassword = e.target.cpassword.value;
+    console.log(name);
 
     if (password === cpassword) {
-      createUserWithEmailAndPassword(email, password);
+      await createUserWithEmailAndPassword(email, password);
       toast("Email verification send!");
     } else {
       toast.error("Password not matched!");
     }
+    // for update name
+    await updateProfile({ displayName: name });
   };
   if (user || googleUser || facebookUser) {
     navigate("/dashboard");
