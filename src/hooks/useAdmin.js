@@ -6,12 +6,10 @@ const useAdmin = (user) => {
   useEffect(() => {
     const email = user?.email;
     if (email) {
-      fetch(`https://protected-gorge-55622.herokuapp.com/admin/${email}`, {
-        method: "GET",
-      })
+      fetch(`https://protected-gorge-55622.herokuapp.com/admin/${email}`)
         .then((res) => res.json())
         .then((data) => {
-          setAdmin(data?.admin);
+          setAdmin(data.admin);
           setAdminLoading(false);
         });
     }
