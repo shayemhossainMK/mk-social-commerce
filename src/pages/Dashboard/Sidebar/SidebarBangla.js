@@ -1,3 +1,5 @@
+import { faUserGear } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
@@ -68,6 +70,15 @@ const SidebarBangla = () => {
           <Link to="/myactivitybangla">
             <img className="w-5" src={photo8} alt="" />
             আমার এক্টিভিটি
+          </Link>
+        </li>
+        <li>
+          <Link to="/personalinfo">
+            <FontAwesomeIcon
+              className="h-5 text-purple-900"
+              icon={faUserGear}
+            ></FontAwesomeIcon>
+            Personal Information
           </Link>
         </li>
         <li>

@@ -11,28 +11,40 @@ const PersonalDetailsBangla = () => {
             </label>
             <input
               type="text"
-              placeholder="Enter your full name"
+              name="name"
+              placeholder=" আপনার পুরো নাম"
               class="input input-bordered bg-gray-100 w-full max-w-xs"
             />
           </div>
           <div class="form-control w-full max-w-xs">
             <label class="label">
-              <span class="label-text">ইমেইল অ্যাড্রেস</span>
+              <span class="label-text">লিঙ্গ</span>
             </label>
-            <input
-              type="email"
-              placeholder="Email Address"
-              class="input input-bordered w-full bg-gray-100 max-w-xs"
-            />
+            <select class="select select-bordered bg-gray-100 w-full max-w-xs">
+              <option selected>পুরুষ</option>
+              <option>মহিলা</option>
+            </select>
           </div>
           <div class="form-control w-full max-w-xs">
             <label class="label">
-              <span class="label-text">Mobile Number</span>
+              <span class="label-text">মোবাইল নম্বর</span>
             </label>
             <input
               type="text"
-              placeholder="মোবাইল নম্বর"
+              name="phone"
+              placeholder="আপনার মোবাইল নম্বর"
               class="input input-bordered bg-gray-100 w-full max-w-xs"
+            />
+          </div>
+          <div class="form-control w-full max-w-xs">
+            <label class="label">
+              <span class="label-text">বয়স</span>
+            </label>
+            <input
+              type="number"
+              name="age"
+              placeholder="আপনার বয়স"
+              class="input input-bordered w-full bg-gray-100 max-w-xs"
             />
           </div>
           <div class="form-control w-full max-w-xs">
@@ -41,7 +53,8 @@ const PersonalDetailsBangla = () => {
             </label>
             <input
               type="text"
-              placeholder="Address"
+              name="address"
+              placeholder="আপনার অ্যাড্রেস"
               class="input input-bordered w-full bg-gray-100 max-w-xs"
             />
           </div>

@@ -25,6 +25,7 @@ import PaymentHistory from "./pages/Dashboard/PaymentHistory/PaymentHistory";
 import PaymentHistoryBangla from "./pages/Dashboard/PaymentHistory/PaymentHistoryBangla";
 import PerformanceReport from "./pages/Dashboard/PerformanceReport/PerformanceReport";
 import PerformanceReportBangla from "./pages/Dashboard/PerformanceReport/PerformanceReportBangla";
+import PersonalInfoBangla from "./pages/Dashboard/PersonalInfo/PersonalInfoBangla";
 import AtoZ from "./pages/Dashboard/ProfitRates/AtoZ/AtoZ";
 import AtoZBangla from "./pages/Dashboard/ProfitRates/AtoZ/AtoZBangla";
 import Flatprofit from "./pages/Dashboard/ProfitRates/FlatProfit/FlatProfit";
@@ -274,6 +275,14 @@ function App() {
           element={
             <RequireAuth>
               <MakeLinkBangla></MakeLinkBangla>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/personalinfo"
+          element={
+            <RequireAuth>
+              <PersonalInfoBangla></PersonalInfoBangla>
             </RequireAuth>
           }
         ></Route>
