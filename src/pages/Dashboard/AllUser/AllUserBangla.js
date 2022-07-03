@@ -33,7 +33,7 @@ const AllUserBangla = () => {
                   </h3>
                   <hr className="w-28 mx-auto mt-2" />
                 </div>
-                <div className="md:w-[800px] p-2">
+                <div className="md:w-[800px] md:pb-10 p-2">
                   <div class="overflow-x-auto">
                     <table class="table table-zebra w-full">
                       <thead>
