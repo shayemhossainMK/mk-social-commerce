@@ -46,7 +46,7 @@ const PersonalInfoBangla = () => {
                           className="text-gray-600"
                           style={{ fontFamily: "Macondo" }}
                         >
-                          <h2 class="text-2xl text-center mb-5 font-semibold">
+                          <h2 class="text-2xl text-primary text-center mb-5 font-semibold">
                             {user.displayName ? user.displayName : profile.name}
                           </h2>
                           <div className="shadow-xl rounded-xl p-5 bg-base-100">
