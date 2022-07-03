@@ -43,7 +43,7 @@ const SignupBangla = () => {
     // for update name
     await updateProfile({ displayName: name });
   };
-  if (user || googleUser || facebookUser) {
+  if (token) {
     navigate("/dashboard");
   }
   return (

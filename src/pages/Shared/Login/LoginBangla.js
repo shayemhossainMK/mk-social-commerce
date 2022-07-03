@@ -56,7 +56,7 @@ const LoginBangla = () => {
       </div>
     );
   }
-  if (user || googleUser || facebookUser) {
+  if (token) {
     navigate("/dashboard");
   }
 
