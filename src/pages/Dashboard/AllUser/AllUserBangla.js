@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
+import useUser from "../../../hooks/useUser";
 import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 import SidebarBangla from "../Sidebar/SidebarBangla";
 import AllUserBanglaRow from "./AllUserBanglaRow";
 
 const AllUserBangla = () => {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetch(`https://protected-gorge-55622.herokuapp.com/user`)
-      .then((res) => res.json())
-      .then((data) => setUsers(data));
-  }, [users]);
+  const [users, setUsers] = useUser([]);
 
   return (
     <div>
