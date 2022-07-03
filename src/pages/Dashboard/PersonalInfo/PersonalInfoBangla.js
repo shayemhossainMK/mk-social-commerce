@@ -16,7 +16,7 @@ const PersonalInfoBangla = () => {
     fetch(`https://protected-gorge-55622.herokuapp.com/user/${email}`)
       .then((res) => res.json())
       .then((data) => setUserProfile(data));
-  }, [user, userProfile]);
+  }, [user, userProfile, email]);
   return (
     <div>
       <DashboardHeaderBangla></DashboardHeaderBangla>
