@@ -10,6 +10,7 @@ import {
 import auth from "../../../firebase.init";
 import { toast, ToastContainer } from "react-toastify";
 import { sendPasswordResetEmail } from "firebase/auth";
+import useToken from "../../../hooks/useToken";
 
 const LoginBangla = () => {
   const emailRef = useRef("");
@@ -21,6 +22,8 @@ const LoginBangla = () => {
   const [signInWithFacebook, facebookUser, facebookLoading, facebookError] =
     useSignInWithFacebook(auth);
   const navigate = useNavigate();
+
+  const [token] = useToken(user || googleUser || facebookUser);
 
   const handleLogin = async (e) => {
     e.preventDefault();

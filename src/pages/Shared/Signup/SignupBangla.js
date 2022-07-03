@@ -24,7 +24,6 @@ const SignupBangla = () => {
   const navigate = useNavigate();
 
   const [token] = useToken(user || googleUser || facebookUser);
-  console.log(token);
 
   const handleSignup = async (e) => {
     e.preventDefault();
