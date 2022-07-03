@@ -1,4 +1,4 @@
-import { faUserGear } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faUserGear, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -84,7 +84,10 @@ const SidebarBangla = () => {
         <li>
           {admin ? (
             <Link to="/alluserbangla">
-              <img className="w-5" src={photo8} alt="" />
+              <FontAwesomeIcon
+                className="h-4 text-purple-900"
+                icon={faUsers}
+              ></FontAwesomeIcon>
               All User
             </Link>
           ) : (

@@ -18,7 +18,7 @@ const PersonalDetailsBangla = () => {
     const email = user?.email;
     const userInfo = { name, phone, age, address, gender };
 
-    fetch(`http://localhost:5000/user/${email}`, {
+    fetch(`https://protected-gorge-55622.herokuapp.com/user/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

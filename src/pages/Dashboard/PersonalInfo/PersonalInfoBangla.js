@@ -13,7 +13,7 @@ const PersonalInfoBangla = () => {
   const email = user?.email;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${email}`)
+    fetch(`https://protected-gorge-55622.herokuapp.com/user/${email}`)
       .then((res) => res.json())
       .then((data) => setUserProfile(data));
   }, [user, userProfile]);
