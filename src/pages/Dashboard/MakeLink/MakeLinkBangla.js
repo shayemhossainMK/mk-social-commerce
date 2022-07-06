@@ -6,13 +6,13 @@ import HomepageLInkTwo from "./HomepageLink/HomepageLinkTwo";
 import ProfitLinkForm from "./ProfitLinkForm";
 
 const MakeLinkBangla = () => {
-  const [profitLinks, setProfitLinks] = useState([]);
+  // const [profitLinks, setProfitLinks] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/profitlink")
-      .then((res) => res.json())
-      .then((data) => setProfitLinks(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/profitlink")
+  //     .then((res) => res.json())
+  //     .then((data) => setProfitLinks(data));
+  // }, []);
   return (
     <div>
       <DashboardHeaderBangla></DashboardHeaderBangla>
@@ -50,6 +50,7 @@ const MakeLinkBangla = () => {
                       profitLink={profitLink}
                     ></ProfitLinkForm>
                   ))} */}
+
                   <ProfitLinkForm></ProfitLinkForm>
                 </div>
               </div>
