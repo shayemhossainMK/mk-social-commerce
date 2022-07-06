@@ -6,13 +6,16 @@ import profitLinkFunction from "../../../function/profitLinkFunction";
 const ProfitLinkForm = () => {
   const [profitLinks, setProfitLinks] = useState([]);
 
-  //   useEffect(() => {
-  //     fetch("http://localhost:5000/profitlink")
-  //       .then((res) => res.json())
-  //       .then((data) => setProfitLinks(data));
-  //   }, []);
-  const pro = profitLinkFunction(profitLinks);
-  console.log(pro);
+  useEffect(() => {
+    fetch("http://localhost:5000/profitlink")
+      .then((res) => res.json())
+      .then((data) => setProfitLinks(data));
+  }, []);
+  // console.log(profitLinks[1]?.Domain);
+
+  // const pro = profitLinkFunction(profitLinks);
+  // console.log(pro);
+
   //   const { _id, Domain, Name, Token } = profitLink;
   //   const subDomainLink = Domain.split("/")[2];
   //   profitLinks.map((profitLink) => console.log(profitLink));
@@ -20,15 +23,43 @@ const ProfitLinkForm = () => {
   const handleLink = (e) => {
     e.preventDefault();
 
-    // const mainLink = e.target.link.value;
+    const mainLink = e.target.link.value;
     // console.log(mainLink);
-    // const subLink = mainLink.split("/")[2];
+    const subLink = mainLink.split("/")[2];
     // console.log(subLink);
     // console.log("This is from database", subDomainLink);
 
-    fetch("http://localhost:5000/profitlink")
-      .then((res) => res.json())
-      .then((data) => setProfitLinks(data));
+    // fetch("http://localhost:5000/profitlink")
+    //   .then((res) => res.json())
+    //   .then((data) => setProfitLinks(data));
+
+    // const pro = profitLinkFunction(profitLinks);
+    // console.log(pro);
+    const myfunction = (value, index) => {
+      const talue = value.Domain;
+      const token = value.Token;
+      const subDomainLink = talue.split("/")[2];
+      if (subLink == subDomainLink) {
+        console.log(token);
+        console.log("I love backend!");
+        const data = { mainLink, subLink, token };
+        const url = `http://localhost:5000/querylink`;
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((result) => console.log(result));
+
+        fetch("http://localhost:5000/querylink")
+          .then((res) => res.json())
+          .then((data) => console.log(data));
+      }
+    };
+    profitLinks.map(myfunction);
     // if (subLink == subDomainLink) {
     //   console.log("I love backend!");
     // } else {

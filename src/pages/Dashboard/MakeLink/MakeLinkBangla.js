@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import profitLinkFunction from "../../../function/profitLinkFunction";
 import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 import SidebarBangla from "../Sidebar/SidebarBangla";
 import HomepageLink from "./HomepageLink/HomepageLInk";
@@ -13,6 +14,11 @@ const MakeLinkBangla = () => {
   //     .then((res) => res.json())
   //     .then((data) => setProfitLinks(data));
   // }, []);
+
+  // // Object.values(profitLinks).map((profitLink) => console.log(profitLink.Name));
+
+  // const pro = profitLinkFunction(profitLinks);
+  // console.log(pro);
   return (
     <div>
       <DashboardHeaderBangla></DashboardHeaderBangla>
