@@ -2,15 +2,20 @@ import React, { useEffect, useState } from "react";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import profitLinkFunction from "../../../function/profitLinkFunction";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 
 const ProfitLinkForm = () => {
   const [profitLinks, setProfitLinks] = useState([]);
+  const [user] = useAuthState(auth);
+  const userid = user.uid;
 
   useEffect(() => {
     fetch("http://localhost:5000/profitlink")
       .then((res) => res.json())
       .then((data) => setProfitLinks(data));
   }, []);
+  ``;
   // console.log(profitLinks[1]?.Domain);
 
   // const pro = profitLinkFunction(profitLinks);
@@ -40,9 +45,10 @@ const ProfitLinkForm = () => {
       const token = value.Token;
       const subDomainLink = talue.split("/")[2];
       if (subLink == subDomainLink) {
-        console.log(token);
         console.log("I love backend!");
         const data = { mainLink, subLink, token };
+
+        // this is for querylink with given data
         const url = `http://localhost:5000/querylink`;
         fetch(url, {
           method: "POST",
@@ -54,9 +60,24 @@ const ProfitLinkForm = () => {
           .then((res) => res.json())
           .then((result) => console.log(result));
 
-        fetch("http://localhost:5000/querylink")
+        // this is for shortlink and pass firebase user id into backend
+
+        // fetch(`http://localhost:5000/shortlink`, {
+        //   method: "PUT",
+        //   headers: {
+        //     "content-type": "application/json",
+        //   },
+        //   body: JSON.stringify(userId),
+        // })
+        //   .then((res) => res.json())
+        //   .then((result) => console.log(result));
+        // fetch(`http://localhost:5000/user/${id}`)
+        //   .then((res) => res.json())
+        //   .then((data) => console.log("user info", data));
+
+        fetch(`http://localhost:5000/querylink/${userid}`)
           .then((res) => res.json())
-          .then((data) => console.log(data));
+          .then((data) => console.log("querylink get", data));
       }
     };
     profitLinks.map(myfunction);

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import profitLinkFunction from "../../../function/profitLinkFunction";
 import DashboardHeaderBangla from "../DashHeader/DashboardHeaderBangla";
 import SidebarBangla from "../Sidebar/SidebarBangla";
 import HomepageLink from "./HomepageLink/HomepageLInk";
@@ -49,14 +48,7 @@ const MakeLinkBangla = () => {
                   সহজে প্রোফাইল লিংক পেতে নীচের বাক্সে আমাদের ব্রান্ড পার্টনারের
                   সাইটগুলি থেকে লিংক পেস্ট করুন৷
                 </p>
-                <div className="">
-                  {/* {profitLinks.map((profitLink) => (
-                    <ProfitLinkForm
-                      key={profitLink._id}
-                      profitLink={profitLink}
-                    ></ProfitLinkForm>
-                  ))} */}
-
+                <div>
                   <ProfitLinkForm></ProfitLinkForm>
                 </div>
               </div>
@@ -83,7 +75,6 @@ const MakeLinkBangla = () => {
             </div>
           </div>
 
-          {/* <Sidebar></Sidebar> */}
           <SidebarBangla></SidebarBangla>
         </div>
       </div>
